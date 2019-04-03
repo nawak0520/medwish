@@ -1,0 +1,48 @@
+
+.token .label {
+	flex: 1;
+}
+
+.token h3 {
+	flex: 2;
+}
+
+.token .row {
+	margin: 8px;
+	font-size: 14px;
+}
+
+.token select {
+	color: #c4cace;
+	background: #ffffff;
+	border: 1px solid #d4dee7;
+	border-radius: 2px;
+	font-size: 16px;
+}
+
+.token .input .label {
+	font-size: 16px;
+}
+
+.token hr {
+	border: 1px solid #e5edf3;
+	width: 330px;
+}
+
+h3 {
+	font-size: 20px;
+	font-family: "Source Serif Pro", serif;
+	margin: 0;
+
+	font-weight: normal;
+}
+
+.campaign .row{
+	justify-content: space-evenly;
+	padding: 20px;
+}
+
+.campaign .inactive{
+	filter: grayscale(100%);
+	opacity: 0.5;
+}

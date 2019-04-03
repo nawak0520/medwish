@@ -1,0 +1,519 @@
+Apr  2 17:08:44 10.71.51.0 u95941086-MBC Connection from 10.71.51.0 port 22072 on 82.165.82.38 port 22
+Apr  2 17:08:44 10.71.51.0 u95941086-MBC Accepted password for u95941086-MBC from 10.71.51.0 port 22072 ssh2
+Apr  2 17:08:44 10.71.51.0 u95941086-MBC Starting session: subsystem 'sftp' for u95941086-MBC from 10.71.51.0 port 22072
+Apr  2 17:08:44 10.71.51.0 u95941086-MBC session opened for local user u95941086-MBC from [10.71.51.0]
+Apr  2 17:09:44 10.71.51.0 u95941086-MBC Connection from 10.71.51.0 port 45322 on 82.165.82.38 port 22
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC Accepted password for u95941086-MBC from 10.71.51.0 port 45322 ssh2
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC Starting session: subsystem 'sftp' for u95941086-MBC from 10.71.51.0 port 45322
+Apr  2 17:09:44 10.71.51.0 u95941086-MBC Connection from 10.71.51.0 port 45324 on 82.165.82.38 port 22
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC Accepted password for u95941086-MBC from 10.71.51.0 port 45324 ssh2
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC session opened for local user u95941086-MBC from [10.71.51.0]
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC Starting session: subsystem 'sftp' for u95941086-MBC from 10.71.51.0 port 45324
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC session opened for local user u95941086-MBC from [10.71.51.0]
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC open "/404.html" flags READ mode 0666
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC open "/.htaccess" flags READ mode 0666
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC close "/404.html" bytes read 5695 written 0
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|5695|0|0|0|2f3430342e68746d6c|]
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC close "/.htaccess" bytes read 31 written 0
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|31|0|0|0|2f2e6874616363657373|]
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC open "/favicon.ico" flags READ mode 0666
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC open "/index.html" flags READ mode 0666
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC close "/favicon.ico" bytes read 14942 written 0
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|14942|0|0|0|2f66617669636f6e2e69636f|]
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC close "/index.html" bytes read 954 written 0
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|954|0|0|0|2f696e6465782e68746d6c|]
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC open "/en/favicon.ico" flags READ mode 0666
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC open "/en/.htaccess" flags READ mode 0666
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC close "/en/favicon.ico" bytes read 14942 written 0
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|14942|0|0|0|2f656e2f66617669636f6e2e69636f|]
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC close "/en/.htaccess" bytes read 31 written 0
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|31|0|0|0|2f656e2f2e6874616363657373|]
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC open "/en/signup.html" flags READ mode 0666
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC open "/en/comming-soon.html" flags READ mode 0666
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC close "/en/signup.html" bytes read 1516 written 0
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|1516|0|0|0|2f656e2f7369676e75702e68746d6c|]
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC close "/en/comming-soon.html" bytes read 5651 written 0
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|5651|0|0|0|2f656e2f636f6d6d696e672d736f6f6e2e68746d6c|]
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC open "/en/login.html" flags READ mode 0666
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC close "/en/login.html" bytes read 1087 written 0
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|1087|0|0|0|2f656e2f6c6f67696e2e68746d6c|]
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC open "/en/404.html" flags READ mode 0666
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC open "/en/index.html" flags READ mode 0666
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC close "/en/404.html" bytes read 5788 written 0
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|5788|0|0|0|2f656e2f3430342e68746d6c|]
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC close "/en/index.html" bytes read 19485 written 0
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|19485|0|0|0|2f656e2f696e6465782e68746d6c|]
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC open "/en/section/allocation.svg" flags READ mode 0666
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC open "/en/section/token-sale.png" flags READ mode 0666
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC close "/en/section/allocation.svg" bytes read 70917 written 0
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|70917|0|0|0|2f656e2f73656374696f6e2f616c6c6f636174696f6e2e737667|]
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC close "/en/section/token-sale.png" bytes read 96033 written 0
+Apr  2 17:09:45 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|96033|0|0|0|2f656e2f73656374696f6e2f746f6b656e2d73616c652e706e67|]
+Apr  2 17:09:46 10.71.51.0 u95941086-MBC open "/en/section/main-sale.png" flags READ mode 0666
+Apr  2 17:09:46 10.71.51.0 u95941086-MBC open "/en/section/solution-bis.svg" flags READ mode 0666
+Apr  2 17:09:46 10.71.51.0 u95941086-MBC close "/en/section/main-sale.png" bytes read 90812 written 0
+Apr  2 17:09:46 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|90812|0|0|0|2f656e2f73656374696f6e2f6d61696e2d73616c652e706e67|]
+Apr  2 17:09:46 10.71.51.0 u95941086-MBC close "/en/section/solution-bis.svg" bytes read 580973 written 0
+Apr  2 17:09:46 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|580973|0|0|0|2f656e2f73656374696f6e2f736f6c7574696f6e2d6269732e737667|]
+Apr  2 17:09:46 10.71.51.0 u95941086-MBC open "/en/section/allocation.png" flags READ mode 0666
+Apr  2 17:09:46 10.71.51.0 u95941086-MBC open "/en/section/solution.svg" flags READ mode 0666
+Apr  2 17:09:46 10.71.51.0 u95941086-MBC close "/en/section/allocation.png" bytes read 277716 written 0
+Apr  2 17:09:46 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|277716|0|0|0|2f656e2f73656374696f6e2f616c6c6f636174696f6e2e706e67|]
+Apr  2 17:09:46 10.71.51.0 u95941086-MBC close "/en/section/solution.svg" bytes read 150041 written 0
+Apr  2 17:09:46 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|150041|0|0|0|2f656e2f73656374696f6e2f736f6c7574696f6e2e737667|]
+Apr  2 17:09:46 10.71.51.0 u95941086-MBC open "/en/section/roadmap.svg" flags READ mode 0666
+Apr  2 17:09:46 10.71.51.0 u95941086-MBC open "/en/section/ecosys.svg" flags READ mode 0666
+Apr  2 17:09:46 10.71.51.0 u95941086-MBC close "/en/section/ecosys.svg" bytes read 134822 written 0
+Apr  2 17:09:46 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|134822|0|0|0|2f656e2f73656374696f6e2f65636f7379732e737667|]
+Apr  2 17:09:46 10.71.51.0 u95941086-MBC close "/en/section/roadmap.svg" bytes read 203497 written 0
+Apr  2 17:09:46 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|203497|0|0|0|2f656e2f73656374696f6e2f726f61646d61702e737667|]
+Apr  2 17:09:46 10.71.51.0 u95941086-MBC open "/en/section/roadmap.png" flags READ mode 0666
+Apr  2 17:09:46 10.71.51.0 u95941086-MBC close "/en/section/roadmap.png" bytes read 325735 written 0
+Apr  2 17:09:46 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|325735|0|0|0|2f656e2f73656374696f6e2f726f61646d61702e706e67|]
+Apr  2 17:09:46 10.71.51.0 u95941086-MBC open "/en/doc/Bounty_Paper.pdf" flags READ mode 0666
+Apr  2 17:09:46 10.71.51.0 u95941086-MBC open "/en/doc/Commitment_Paper.pdf" flags READ mode 0666
+Apr  2 17:09:47 10.71.51.0 u95941086-MBC close "/en/doc/Bounty_Paper.pdf" bytes read 3706557 written 0
+Apr  2 17:09:47 10.71.51.0 u95941086-MBC [10.71.51.0|get|1|3706557|0|0|0|2f656e2f646f632f426f756e74795f50617065722e706466|]
+Apr  2 17:09:47 10.71.51.0 u95941086-MBC close "/en/doc/Commitment_Paper.pdf" bytes read 3697276 written 0
+Apr  2 17:09:47 10.71.51.0 u95941086-MBC [10.71.51.0|get|1|3697276|0|0|0|2f656e2f646f632f436f6d6d69746d656e745f50617065722e706466|]
+Apr  2 17:09:47 10.71.51.0 u95941086-MBC open "/fonts/source-serif-pro/SourceSerifPro-Bold.ttf" flags READ mode 0666
+Apr  2 17:09:47 10.71.51.0 u95941086-MBC open "/fonts/source-serif-pro/SourceSerifPro-Semibold.ttf" flags READ mode 0666
+Apr  2 17:09:47 10.71.51.0 u95941086-MBC close "/fonts/source-serif-pro/SourceSerifPro-Bold.ttf" bytes read 106824 written 0
+Apr  2 17:09:47 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|106824|0|0|0|2f666f6e74732f736f757263652d73657269662d70726f2f536f75726365536572696650726f2d426f6c642e747466|]
+Apr  2 17:09:47 10.71.51.0 u95941086-MBC close "/fonts/source-serif-pro/SourceSerifPro-Semibold.ttf" bytes read 107988 written 0
+Apr  2 17:09:47 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|107988|0|0|0|2f666f6e74732f736f757263652d73657269662d70726f2f536f75726365536572696650726f2d53656d69626f6c642e747466|]
+Apr  2 17:09:47 10.71.51.0 u95941086-MBC open "/fonts/source-serif-pro/SourceSerifPro-Regular.ttf" flags READ mode 0666
+Apr  2 17:09:47 10.71.51.0 u95941086-MBC close "/fonts/source-serif-pro/SourceSerifPro-Regular.ttf" bytes read 107276 written 0
+Apr  2 17:09:47 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|107276|0|0|0|2f666f6e74732f736f757263652d73657269662d70726f2f536f75726365536572696650726f2d526567756c61722e747466|]
+Apr  2 17:09:47 10.71.51.0 u95941086-MBC open "/fonts/source-sans-pro/SourceSansPro-Italic.ttf" flags READ mode 0666
+Apr  2 17:09:47 10.71.51.0 u95941086-MBC close "/fonts/source-sans-pro/SourceSansPro-Italic.ttf" bytes read 119264 written 0
+Apr  2 17:09:47 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|119264|0|0|0|2f666f6e74732f736f757263652d73616e732d70726f2f536f7572636553616e7350726f2d4974616c69632e747466|]
+Apr  2 17:09:47 10.71.51.0 u95941086-MBC open "/fonts/source-sans-pro/SourceSansPro-ExtraLightItalic.ttf" flags READ mode 0666
+Apr  2 17:09:47 10.71.51.0 u95941086-MBC open "/fonts/source-sans-pro/SourceSansPro-Semibold.ttf" flags READ mode 0666
+Apr  2 17:09:47 10.71.51.0 u95941086-MBC close "/fonts/source-sans-pro/SourceSansPro-ExtraLightItalic.ttf" bytes read 120076 written 0
+Apr  2 17:09:47 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|120076|0|0|0|2f666f6e74732f736f757263652d73616e732d70726f2f536f7572636553616e7350726f2d45787472614c696768744974616c69632e747466|]
+Apr  2 17:09:47 10.71.51.0 u95941086-MBC close "/fonts/source-sans-pro/SourceSansPro-Semibold.ttf" bytes read 118804 written 0
+Apr  2 17:09:47 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|118804|0|0|0|2f666f6e74732f736f757263652d73616e732d70726f2f536f7572636553616e7350726f2d53656d69626f6c642e747466|]
+Apr  2 17:09:47 10.71.51.0 u95941086-MBC open "/fonts/source-sans-pro/SourceSansPro-BoldItalic.ttf" flags READ mode 0666
+Apr  2 17:09:47 10.71.51.0 u95941086-MBC open "/fonts/source-sans-pro/SourceSansPro-ExtraLight.ttf" flags READ mode 0666
+Apr  2 17:09:47 10.71.51.0 u95941086-MBC close "/fonts/source-sans-pro/SourceSansPro-BoldItalic.ttf" bytes read 118780 written 0
+Apr  2 17:09:47 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|118780|0|0|0|2f666f6e74732f736f757263652d73616e732d70726f2f536f7572636553616e7350726f2d426f6c644974616c69632e747466|]
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC close "/fonts/source-sans-pro/SourceSansPro-ExtraLight.ttf" bytes read 119324 written 0
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC [10.71.51.0|get|1|119324|0|0|0|2f666f6e74732f736f757263652d73616e732d70726f2f536f7572636553616e7350726f2d45787472614c696768742e747466|]
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC open "/fonts/source-sans-pro/SourceSansPro-Black.ttf" flags READ mode 0666
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC open "/fonts/source-sans-pro/SourceSansPro-Light.ttf" flags READ mode 0666
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC close "/fonts/source-sans-pro/SourceSansPro-Black.ttf" bytes read 118004 written 0
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|118004|0|0|0|2f666f6e74732f736f757263652d73616e732d70726f2f536f7572636553616e7350726f2d426c61636b2e747466|]
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC close "/fonts/source-sans-pro/SourceSansPro-Light.ttf" bytes read 118816 written 0
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|118816|0|0|0|2f666f6e74732f736f757263652d73616e732d70726f2f536f7572636553616e7350726f2d4c696768742e747466|]
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC open "/fonts/source-sans-pro/SourceSansPro-LightItalic.ttf" flags READ mode 0666
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC open "/fonts/source-sans-pro/SourceSansPro-Bold.ttf" flags READ mode 0666
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC close "/fonts/source-sans-pro/SourceSansPro-LightItalic.ttf" bytes read 119208 written 0
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|119208|0|0|0|2f666f6e74732f736f757263652d73616e732d70726f2f536f7572636553616e7350726f2d4c696768744974616c69632e747466|]
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC open "/fonts/source-sans-pro/SourceSansPro-Regular.ttf" flags READ mode 0666
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC close "/fonts/source-sans-pro/SourceSansPro-Bold.ttf" bytes read 118604 written 0
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|118604|0|0|0|2f666f6e74732f736f757263652d73616e732d70726f2f536f7572636553616e7350726f2d426f6c642e747466|]
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC open "/fonts/source-sans-pro/SourceSansPro-BlackItalic.ttf" flags READ mode 0666
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC close "/fonts/source-sans-pro/SourceSansPro-Regular.ttf" bytes read 119080 written 0
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|119080|0|0|0|2f666f6e74732f736f757263652d73616e732d70726f2f536f7572636553616e7350726f2d526567756c61722e747466|]
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC open "/fonts/source-sans-pro/SourceSansPro-SemiboldItalic.ttf" flags READ mode 0666
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC close "/fonts/source-sans-pro/SourceSansPro-BlackItalic.ttf" bytes read 118560 written 0
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|118560|0|0|0|2f666f6e74732f736f757263652d73616e732d70726f2f536f7572636553616e7350726f2d426c61636b4974616c69632e747466|]
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC close "/fonts/source-sans-pro/SourceSansPro-SemiboldItalic.ttf" bytes read 119012 written 0
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|119012|0|0|0|2f666f6e74732f736f757263652d73616e732d70726f2f536f7572636553616e7350726f2d53656d69626f6c644974616c69632e747466|]
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC open "/fonts/vollkorn/TTF/Vollkorn-SemiboldItalic.ttf" flags READ mode 0666
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC open "/fonts/vollkorn/TTF/Vollkorn-Medium.ttf" flags READ mode 0666
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC close "/fonts/vollkorn/TTF/Vollkorn-SemiboldItalic.ttf" bytes read 106676 written 0
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|106676|0|0|0|2f666f6e74732f766f6c6c6b6f726e2f5454462f566f6c6c6b6f726e2d53656d69626f6c644974616c69632e747466|]
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC open "/fonts/vollkorn/TTF/Vollkorn-BoldItalic.ttf" flags READ mode 0666
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC close "/fonts/vollkorn/TTF/Vollkorn-Medium.ttf" bytes read 119532 written 0
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|119532|0|0|0|2f666f6e74732f766f6c6c6b6f726e2f5454462f566f6c6c6b6f726e2d4d656469756d2e747466|]
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC sent status No such file
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC open "/fonts/vollkorn/TTF/Vollkorn-MediumItalic.ttf" flags READ mode 0666
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC close "/fonts/vollkorn/TTF/Vollkorn-BoldItalic.ttf" bytes read 103940 written 0
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|103940|0|0|0|2f666f6e74732f766f6c6c6b6f726e2f5454462f566f6c6c6b6f726e2d426f6c644974616c69632e747466|]
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC open "/fonts/vollkorn/TTF/Vollkorn-Italic.ttf" flags READ mode 0666
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC close "/fonts/vollkorn/TTF/Vollkorn-MediumItalic.ttf" bytes read 105940 written 0
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|105940|0|0|0|2f666f6e74732f766f6c6c6b6f726e2f5454462f566f6c6c6b6f726e2d4d656469756d4974616c69632e747466|]
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC open "/fonts/vollkorn/TTF/Vollkorn-Regular.ttf" flags READ mode 0666
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC close "/fonts/vollkorn/TTF/Vollkorn-Italic.ttf" bytes read 99180 written 0
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|99180|0|0|0|2f666f6e74732f766f6c6c6b6f726e2f5454462f566f6c6c6b6f726e2d4974616c69632e747466|]
+Apr  2 17:09:48 10.71.51.0 u95941086-MBC open "/fonts/vollkorn/TTF/Vollkorn-Bold.ttf" flags READ mode 0666
+Apr  2 17:09:49 10.71.51.0 u95941086-MBC close "/fonts/vollkorn/TTF/Vollkorn-Regular.ttf" bytes read 114028 written 0
+Apr  2 17:09:49 10.71.51.0 u95941086-MBC [10.71.51.0|get|1|114028|0|0|0|2f666f6e74732f766f6c6c6b6f726e2f5454462f566f6c6c6b6f726e2d526567756c61722e747466|]
+Apr  2 17:09:49 10.71.51.0 u95941086-MBC open "/fonts/vollkorn/TTF/Vollkorn-Semibold.ttf" flags READ mode 0666
+Apr  2 17:09:49 10.71.51.0 u95941086-MBC close "/fonts/vollkorn/TTF/Vollkorn-Semibold.ttf" bytes read 119940 written 0
+Apr  2 17:09:49 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|119940|0|0|0|2f666f6e74732f766f6c6c6b6f726e2f5454462f566f6c6c6b6f726e2d53656d69626f6c642e747466|]
+Apr  2 17:09:49 10.71.51.0 u95941086-MBC close "/fonts/vollkorn/TTF/Vollkorn-Bold.ttf" bytes read 118600 written 0
+Apr  2 17:09:49 10.71.51.0 u95941086-MBC [10.71.51.0|get|1|118600|0|0|0|2f666f6e74732f766f6c6c6b6f726e2f5454462f566f6c6c6b6f726e2d426f6c642e747466|]
+Apr  2 17:09:49 10.71.51.0 u95941086-MBC open "/fonts/vollkorn/EOT/vollkorn-semibold-webfont.eot" flags READ mode 0666
+Apr  2 17:09:49 10.71.51.0 u95941086-MBC close "/fonts/vollkorn/EOT/vollkorn-semibold-webfont.eot" bytes read 52802 written 0
+Apr  2 17:09:49 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|52802|0|0|0|2f666f6e74732f766f6c6c6b6f726e2f454f542f766f6c6c6b6f726e2d73656d69626f6c642d776562666f6e742e656f74|]
+Apr  2 17:09:49 10.71.51.0 u95941086-MBC open "/fonts/vollkorn/EOT/vollkorn-bold-webfont.eot" flags READ mode 0666
+Apr  2 17:09:49 10.71.51.0 u95941086-MBC open "/fonts/vollkorn/EOT/vollkorn-italic-webfont.eot" flags READ mode 0666
+Apr  2 17:09:49 10.71.51.0 u95941086-MBC close "/fonts/vollkorn/EOT/vollkorn-italic-webfont.eot" bytes read 43262 written 0
+Apr  2 17:09:49 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|43262|0|0|0|2f666f6e74732f766f6c6c6b6f726e2f454f542f766f6c6c6b6f726e2d6974616c69632d776562666f6e742e656f74|]
+Apr  2 17:09:49 10.71.51.0 u95941086-MBC close "/fonts/vollkorn/EOT/vollkorn-bold-webfont.eot" bytes read 49844 written 0
+Apr  2 17:09:49 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|49844|0|0|0|2f666f6e74732f766f6c6c6b6f726e2f454f542f766f6c6c6b6f726e2d626f6c642d776562666f6e742e656f74|]
+Apr  2 17:09:49 10.71.51.0 u95941086-MBC open "/fonts/vollkorn/EOT/vollkorn-medium-webfont.eot" flags READ mode 0666
+Apr  2 17:09:49 10.71.51.0 u95941086-MBC open "/fonts/vollkorn/EOT/vollkorn-mediumitalic-webfont.eot" flags READ mode 0666
+Apr  2 17:09:49 10.71.51.0 u95941086-MBC close "/fonts/vollkorn/EOT/vollkorn-medium-webfont.eot" bytes read 52337 written 0
+Apr  2 17:09:49 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|52337|0|0|0|2f666f6e74732f766f6c6c6b6f726e2f454f542f766f6c6c6b6f726e2d6d656469756d2d776562666f6e742e656f74|]
+Apr  2 17:09:49 10.71.51.0 u95941086-MBC close "/fonts/vollkorn/EOT/vollkorn-mediumitalic-webfont.eot" bytes read 47456 written 0
+Apr  2 17:09:49 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|47456|0|0|0|2f666f6e74732f766f6c6c6b6f726e2f454f542f766f6c6c6b6f726e2d6d656469756d6974616c69632d776562666f6e742e656f74|]
+Apr  2 17:09:49 10.71.51.0 u95941086-MBC open "/fonts/vollkorn/EOT/vollkorn-bolditalic-webfont.eot" flags READ mode 0666
+Apr  2 17:09:49 10.71.51.0 u95941086-MBC open "/fonts/vollkorn/EOT/vollkorn-regular-webfont.eot" flags READ mode 0666
+Apr  2 17:09:49 10.71.51.0 u95941086-MBC close "/fonts/vollkorn/EOT/vollkorn-bolditalic-webfont.eot" bytes read 57408 written 0
+Apr  2 17:09:49 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|57408|0|0|0|2f666f6e74732f766f6c6c6b6f726e2f454f542f766f6c6c6b6f726e2d626f6c646974616c69632d776562666f6e742e656f74|]
+Apr  2 17:09:49 10.71.51.0 u95941086-MBC close "/fonts/vollkorn/EOT/vollkorn-regular-webfont.eot" bytes read 48517 written 0
+Apr  2 17:09:49 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|48517|0|0|0|2f666f6e74732f766f6c6c6b6f726e2f454f542f766f6c6c6b6f726e2d726567756c61722d776562666f6e742e656f74|]
+Apr  2 17:09:49 10.71.51.0 u95941086-MBC open "/fonts/vollkorn/EOT/vollkorn-semibolditalic-webfont.eot" flags READ mode 0666
+Apr  2 17:09:50 10.71.51.0 u95941086-MBC open "/fr/favicon.ico" flags READ mode 0666
+Apr  2 17:09:50 10.71.51.0 u95941086-MBC close "/fonts/vollkorn/EOT/vollkorn-semibolditalic-webfont.eot" bytes read 47512 written 0
+Apr  2 17:09:50 10.71.51.0 u95941086-MBC [10.71.51.0|get|1|47512|0|0|0|2f666f6e74732f766f6c6c6b6f726e2f454f542f766f6c6c6b6f726e2d73656d69626f6c646974616c69632d776562666f6e742e656f74|]
+Apr  2 17:09:50 10.71.51.0 u95941086-MBC close "/fr/favicon.ico" bytes read 14942 written 0
+Apr  2 17:09:50 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|14942|0|0|0|2f66722f66617669636f6e2e69636f|]
+Apr  2 17:09:50 10.71.51.0 u95941086-MBC open "/fr/.htaccess" flags READ mode 0666
+Apr  2 17:09:50 10.71.51.0 u95941086-MBC open "/fr/policy.html" flags READ mode 0666
+Apr  2 17:09:50 10.71.51.0 u95941086-MBC close "/fr/.htaccess" bytes read 31 written 0
+Apr  2 17:09:50 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|31|0|0|0|2f66722f2e6874616363657373|]
+Apr  2 17:09:50 10.71.51.0 u95941086-MBC open "/fr/signup.html" flags READ mode 0666
+Apr  2 17:09:50 10.71.51.0 u95941086-MBC close "/fr/signup.html" bytes read 1516 written 0
+Apr  2 17:09:50 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|1516|0|0|0|2f66722f7369676e75702e68746d6c|]
+Apr  2 17:09:50 10.71.51.0 u95941086-MBC close "/fr/policy.html" bytes read 21975 written 0
+Apr  2 17:09:50 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|21975|0|0|0|2f66722f706f6c6963792e68746d6c|]
+Apr  2 17:09:50 10.71.51.0 u95941086-MBC open "/fr/comming-soon.html" flags READ mode 0666
+Apr  2 17:09:50 10.71.51.0 u95941086-MBC close "/fr/comming-soon.html" bytes read 5658 written 0
+Apr  2 17:09:50 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|5658|0|0|0|2f66722f636f6d6d696e672d736f6f6e2e68746d6c|]
+Apr  2 17:09:50 10.71.51.0 u95941086-MBC open "/fr/cgu.html" flags READ mode 0666
+Apr  2 17:09:50 10.71.51.0 u95941086-MBC open "/fr/login.html" flags READ mode 0666
+Apr  2 17:09:50 10.71.51.0 u95941086-MBC close "/fr/login.html" bytes read 1087 written 0
+Apr  2 17:09:50 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|1087|0|0|0|2f66722f6c6f67696e2e68746d6c|]
+Apr  2 17:09:50 10.71.51.0 u95941086-MBC close "/fr/cgu.html" bytes read 42202 written 0
+Apr  2 17:09:50 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|42202|0|0|0|2f66722f6367752e68746d6c|]
+Apr  2 17:09:50 10.71.51.0 u95941086-MBC open "/fr/404.html" flags READ mode 0666
+Apr  2 17:09:50 10.71.51.0 u95941086-MBC open "/fr/index.html" flags READ mode 0666
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC close "/fr/index.html" bytes read 19389 written 0
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC [10.71.51.0|get|1|19389|0|0|0|2f66722f696e6465782e68746d6c|]
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC close "/fr/404.html" bytes read 5788 written 0
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC [10.71.51.0|get|1|5788|0|0|0|2f66722f3430342e68746d6c|]
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC open "/fr/legal.html" flags READ mode 0666
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC open "/fr/section/allocation.svg" flags READ mode 0666
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC close "/fr/legal.html" bytes read 6086 written 0
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|6086|0|0|0|2f66722f6c6567616c2e68746d6c|]
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC close "/fr/section/allocation.svg" bytes read 74402 written 0
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|74402|0|0|0|2f66722f73656374696f6e2f616c6c6f636174696f6e2e737667|]
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC open "/fr/section/main-sale.png" flags READ mode 0666
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC open "/fr/section/token-sale.png" flags READ mode 0666
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC close "/fr/section/main-sale.png" bytes read 241491 written 0
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|241491|0|0|0|2f66722f73656374696f6e2f6d61696e2d73616c652e706e67|]
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC close "/fr/section/token-sale.png" bytes read 303785 written 0
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|303785|0|0|0|2f66722f73656374696f6e2f746f6b656e2d73616c652e706e67|]
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC open "/fr/section/solution-bis.svg" flags READ mode 0666
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC open "/fr/section/allocation.png" flags READ mode 0666
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC close "/fr/section/allocation.png" bytes read 279167 written 0
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|279167|0|0|0|2f66722f73656374696f6e2f616c6c6f636174696f6e2e706e67|]
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC close "/fr/section/solution-bis.svg" bytes read 696248 written 0
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|696248|0|0|0|2f66722f73656374696f6e2f736f6c7574696f6e2d6269732e737667|]
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC open "/fr/section/solution.svg" flags READ mode 0666
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC open "/fr/section/roadmap.svg" flags READ mode 0666
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC close "/fr/section/solution.svg" bytes read 167960 written 0
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|167960|0|0|0|2f66722f73656374696f6e2f736f6c7574696f6e2e737667|]
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC open "/fr/section/faq-bg.jpeg" flags READ mode 0666
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC close "/fr/section/roadmap.svg" bytes read 253115 written 0
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|253115|0|0|0|2f66722f73656374696f6e2f726f61646d61702e737667|]
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC close "/fr/section/faq-bg.jpeg" bytes read 143926 written 0
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|143926|0|0|0|2f66722f73656374696f6e2f6661712d62672e6a706567|]
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC open "/fr/section/roadmap.png" flags READ mode 0666
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC open "/fr/section/ecosys.svg" flags READ mode 0666
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC close "/fr/section/roadmap.png" bytes read 332031 written 0
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|332031|0|0|0|2f66722f73656374696f6e2f726f61646d61702e706e67|]
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC close "/fr/section/ecosys.svg" bytes read 161362 written 0
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|161362|0|0|0|2f66722f73656374696f6e2f65636f7379732e737667|]
+Apr  2 17:09:51 10.71.51.0 u95941086-MBC open "/fr/doc/White_Paper.pdf" flags READ mode 0666
+Apr  2 17:09:52 10.71.51.0 u95941086-MBC open "/fr/doc/Bounty_Paper.pdf" flags READ mode 0666
+Apr  2 17:09:52 10.71.51.0 u95941086-MBC close "/fr/doc/White_Paper.pdf" bytes read 2207177 written 0
+Apr  2 17:09:52 10.71.51.0 u95941086-MBC [10.71.51.0|get|1|2207177|0|0|0|2f66722f646f632f57686974655f50617065722e706466|]
+Apr  2 17:09:52 10.71.51.0 u95941086-MBC open "/fr/doc/Commitment_Paper.pdf" flags READ mode 0666
+Apr  2 17:09:52 10.71.51.0 u95941086-MBC close "/fr/doc/Bounty_Paper.pdf" bytes read 3901865 written 0
+Apr  2 17:09:52 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|3901865|0|0|0|2f66722f646f632f426f756e74795f50617065722e706466|]
+Apr  2 17:09:52 10.71.51.0 u95941086-MBC open "/images/test main sale.png" flags READ mode 0666
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC close "/images/test main sale.png" bytes read 159475 written 0
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC [10.71.51.0|get|1|159475|0|0|0|2f696d616765732f74657374206d61696e2073616c652e706e67|]
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC open "/images/logo.svg" flags READ mode 0666
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC close "/fr/doc/Commitment_Paper.pdf" bytes read 3792456 written 0
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC [10.71.51.0|get|1|3792456|0|0|0|2f66722f646f632f436f6d6d69746d656e745f50617065722e706466|]
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC open "/images/background-spotlight.png" flags READ mode 0666
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC close "/images/background-spotlight.png" bytes read 127564 written 0
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|127564|0|0|0|2f696d616765732f6261636b67726f756e642d73706f746c696768742e706e67|]
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC close "/images/logo.svg" bytes read 12475 written 0
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|12475|0|0|0|2f696d616765732f6c6f676f2e737667|]
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC open "/images/signin.png" flags READ mode 0666
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC open "/images/discord.svg" flags READ mode 0666
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC close "/images/signin.png" bytes read 244376 written 0
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|244376|0|0|0|2f696d616765732f7369676e696e2e706e67|]
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC close "/images/discord.svg" bytes read 4874 written 0
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|4874|0|0|0|2f696d616765732f646973636f72642e737667|]
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC open "/images/twitter.svg" flags READ mode 0666
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC open "/images/linkedin.svg" flags READ mode 0666
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC close "/images/linkedin.svg" bytes read 4825 written 0
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|4825|0|0|0|2f696d616765732f6c696e6b6564696e2e737667|]
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC open "/images/reddit.svg" flags READ mode 0666
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC close "/images/reddit.svg" bytes read 5846 written 0
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|5846|0|0|0|2f696d616765732f7265646469742e737667|]
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC open "/images/medic.svg" flags READ mode 0666
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC close "/images/twitter.svg" bytes read 28155 written 0
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|28155|0|0|0|2f696d616765732f747769747465722e737667|]
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC close "/images/medic.svg" bytes read 4893 written 0
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|4893|0|0|0|2f696d616765732f6d656469632e737667|]
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC open "/images/spinner.svg" flags READ mode 0666
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC open "/images/youtube.svg" flags READ mode 0666
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC close "/images/spinner.svg" bytes read 0 written 0
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|0|0|0|0|2f696d616765732f7370696e6e65722e737667|]
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC open "/images/signup.png" flags READ mode 0666
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC close "/images/youtube.svg" bytes read 2982 written 0
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|2982|0|0|0|2f696d616765732f796f75747562652e737667|]
+Apr  2 17:09:53 10.71.51.0 u95941086-MBC open "/images/facebook.svg" flags READ mode 0666
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC close "/images/signup.png" bytes read 125218 written 0
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC [10.71.51.0|get|1|125218|0|0|0|2f696d616765732f7369676e75702e706e67|]
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC close "/images/facebook.svg" bytes read 4205 written 0
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC [10.71.51.0|get|1|4205|0|0|0|2f696d616765732f66616365626f6f6b2e737667|]
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC open "/images/padlock.svg" flags READ mode 0666
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC open "/images/background.png" flags READ mode 0666
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC close "/images/padlock.svg" bytes read 1118 written 0
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|1118|0|0|0|2f696d616765732f7061646c6f636b2e737667|]
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC close "/images/background.png" bytes read 303954 written 0
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|303954|0|0|0|2f696d616765732f6261636b67726f756e642e706e67|]
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC open "/images/telegram.svg" flags READ mode 0666
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC open "/images/bitcoin.svg" flags READ mode 0666
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC close "/images/telegram.svg" bytes read 5290 written 0
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|5290|0|0|0|2f696d616765732f74656c656772616d2e737667|]
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC close "/images/bitcoin.svg" bytes read 3281 written 0
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|3281|0|0|0|2f696d616765732f626974636f696e2e737667|]
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC open "/images/token.svg" flags READ mode 0666
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC open "/images/background-light.svg" flags READ mode 0666
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC close "/images/token.svg" bytes read 13942 written 0
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|13942|0|0|0|2f696d616765732f746f6b656e2e737667|]
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC open "/images/test tokens sale.png" flags READ mode 0666
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC close "/images/test tokens sale.png" bytes read 178895 written 0
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|178895|0|0|0|2f696d616765732f7465737420746f6b656e732073616c652e706e67|]
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC open "/images/modal-mask.svg" flags READ mode 0666
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC close "/images/modal-mask.svg" bytes read 199 written 0
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|199|0|0|0|2f696d616765732f6d6f64616c2d6d61736b2e737667|]
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC close "/images/background-light.svg" bytes read 559139 written 0
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|559139|0|0|0|2f696d616765732f6261636b67726f756e642d6c696768742e737667|]
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC open "/images/github.svg" flags READ mode 0666
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC close "/images/github.svg" bytes read 5651 written 0
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|5651|0|0|0|2f696d616765732f6769746875622e737667|]
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC open "/images/.DS_Store" flags READ mode 0666
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC open "/images/medium.svg" flags READ mode 0666
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC close "/images/.DS_Store" bytes read 8196 written 0
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|8196|0|0|0|2f696d616765732f2e44535f53746f7265|]
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC close "/images/medium.svg" bytes read 2673 written 0
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|2673|0|0|0|2f696d616765732f6d656469756d2e737667|]
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC open "/images/patners/3.png" flags READ mode 0666
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC close "/images/patners/3.png" bytes read 14436 written 0
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|14436|0|0|0|2f696d616765732f7061746e6572732f332e706e67|]
+Apr  2 17:09:54 10.71.51.0 u95941086-MBC open "/images/patners/2.png" flags READ mode 0666
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC close "/images/patners/2.png" bytes read 34958 written 0
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC [10.71.51.0|get|1|34958|0|0|0|2f696d616765732f7061746e6572732f322e706e67|]
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC open "/images/patners/1.png" flags READ mode 0666
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC close "/images/patners/1.png" bytes read 12770 written 0
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|12770|0|0|0|2f696d616765732f7061746e6572732f312e706e67|]
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC open "/images/patners/6.png" flags READ mode 0666
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC open "/images/patners/4.png" flags READ mode 0666
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC close "/images/patners/6.png" bytes read 16584 written 0
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|16584|0|0|0|2f696d616765732f7061746e6572732f362e706e67|]
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC open "/images/patners/5.png" flags READ mode 0666
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC close "/images/patners/4.png" bytes read 11819 written 0
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|11819|0|0|0|2f696d616765732f7061746e6572732f342e706e67|]
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC close "/images/patners/5.png" bytes read 10976 written 0
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|10976|0|0|0|2f696d616765732f7061746e6572732f352e706e67|]
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC open "/images/user/bounty-inactive.svg" flags READ mode 0666
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC close "/images/user/bounty-inactive.svg" bytes read 1581 written 0
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|1581|0|0|0|2f696d616765732f757365722f626f756e74792d696e6163746976652e737667|]
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC open "/images/user/2fa-enable.svg" flags READ mode 0666
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC close "/images/user/2fa-enable.svg" bytes read 7898 written 0
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|7898|0|0|0|2f696d616765732f757365722f3266612d656e61626c652e737667|]
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC open "/images/section/faq-bg.jpeg" flags READ mode 0666
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC close "/images/section/faq-bg.jpeg" bytes read 143926 written 0
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|143926|0|0|0|2f696d616765732f73656374696f6e2f6661712d62672e6a706567|]
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC open "/images/user/golden-ticket.svg" flags READ mode 0666
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC close "/images/user/golden-ticket.svg" bytes read 3346 written 0
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|3346|0|0|0|2f696d616765732f757365722f676f6c64656e2d7469636b65742e737667|]
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC open "/images/user/bounty-facebook.svg" flags READ mode 0666
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC open "/images/user/ico-calendar.svg" flags READ mode 0666
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC close "/images/user/ico-calendar.svg" bytes read 2369 written 0
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|2369|0|0|0|2f696d616765732f757365722f69636f2d63616c656e6461722e737667|]
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC close "/images/user/bounty-facebook.svg" bytes read 1054 written 0
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|1054|0|0|0|2f696d616765732f757365722f626f756e74792d66616365626f6f6b2e737667|]
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC open "/images/user/purchase-history-inactive.svg" flags READ mode 0666
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC open "/images/user/2fa-disable.svg" flags READ mode 0666
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC close "/images/user/purchase-history-inactive.svg" bytes read 3162 written 0
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|3162|0|0|0|2f696d616765732f757365722f70757263686173652d686973746f72792d696e6163746976652e737667|]
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC close "/images/user/2fa-disable.svg" bytes read 8575 written 0
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|8575|0|0|0|2f696d616765732f757365722f3266612d64697361626c652e737667|]
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC open "/images/user/to.svg" flags READ mode 0666
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC open "/images/user/bounty-media.svg" flags READ mode 0666
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC close "/images/user/to.svg" bytes read 527 written 0
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|527|0|0|0|2f696d616765732f757365722f746f2e737667|]
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC close "/images/user/bounty-media.svg" bytes read 986 written 0
+Apr  2 17:09:55 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|986|0|0|0|2f696d616765732f757365722f626f756e74792d6d656469612e737667|]
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC open "/images/user/purchase-history.svg" flags READ mode 0666
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC open "/images/user/notification.svg" flags READ mode 0666
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC close "/images/user/notification.svg" bytes read 1639 written 0
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|1639|0|0|0|2f696d616765732f757365722f6e6f74696669636174696f6e2e737667|]
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC open "/images/user/exchange.svg" flags READ mode 0666
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC close "/images/user/exchange.svg" bytes read 965 written 0
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|965|0|0|0|2f696d616765732f757365722f65786368616e67652e737667|]
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC close "/images/user/purchase-history.svg" bytes read 3160 written 0
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC [10.71.51.0|get|1|3160|0|0|0|2f696d616765732f757365722f70757263686173652d686973746f72792e737667|]
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC open "/images/user/kyc-documents-inactive.svg" flags READ mode 0666
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC open "/images/user/bounty-linkedin.svg" flags READ mode 0666
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC close "/images/user/kyc-documents-inactive.svg" bytes read 1191 written 0
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|1191|0|0|0|2f696d616765732f757365722f6b79632d646f63756d656e74732d696e6163746976652e737667|]
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC close "/images/user/bounty-linkedin.svg" bytes read 2092 written 0
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|2092|0|0|0|2f696d616765732f757365722f626f756e74792d6c696e6b6564696e2e737667|]
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC open "/images/user/bounty-special.svg" flags READ mode 0666
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC open "/images/user/dashboard.svg" flags READ mode 0666
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC close "/images/user/dashboard.svg" bytes read 1863 written 0
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|1863|0|0|0|2f696d616765732f757365722f64617368626f6172642e737667|]
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC open "/images/user/ico-calendar-inactive.svg" flags READ mode 0666
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC close "/images/user/bounty-special.svg" bytes read 674 written 0
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|674|0|0|0|2f696d616765732f757365722f626f756e74792d7370656369616c2e737667|]
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC close "/images/user/ico-calendar-inactive.svg" bytes read 2387 written 0
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|2387|0|0|0|2f696d616765732f757365722f69636f2d63616c656e6461722d696e6163746976652e737667|]
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC open "/images/user/profil-inactive.svg" flags READ mode 0666
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC open "/images/user/bounty-newsletter.svg" flags READ mode 0666
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC close "/images/user/profil-inactive.svg" bytes read 1071 written 0
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|1071|0|0|0|2f696d616765732f757365722f70726f66696c2d696e6163746976652e737667|]
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC close "/images/user/bounty-newsletter.svg" bytes read 3775 written 0
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|3775|0|0|0|2f696d616765732f757365722f626f756e74792d6e6577736c65747465722e737667|]
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC open "/images/user/bounty-twitter.svg" flags READ mode 0666
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC open "/images/user/bounty-bitcointalk.svg" flags READ mode 0666
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC close "/images/user/bounty-twitter.svg" bytes read 2538 written 0
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|2538|0|0|0|2f696d616765732f757365722f626f756e74792d747769747465722e737667|]
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC close "/images/user/bounty-bitcointalk.svg" bytes read 1624 written 0
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|1624|0|0|0|2f696d616765732f757365722f626f756e74792d626974636f696e74616c6b2e737667|]
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC open "/images/user/purchase.svg" flags READ mode 0666
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC open "/images/user/bounty-telegram.svg" flags READ mode 0666
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC close "/images/user/purchase.svg" bytes read 1032 written 0
+Apr  2 17:09:56 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|1032|0|0|0|2f696d616765732f757365722f70757263686173652e737667|]
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC close "/images/user/bounty-telegram.svg" bytes read 890 written 0
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC [10.71.51.0|get|1|890|0|0|0|2f696d616765732f757365722f626f756e74792d74656c656772616d2e737667|]
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC open "/images/user/kyc-documents.svg" flags READ mode 0666
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC open "/images/user/profil.svg" flags READ mode 0666
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC close "/images/user/kyc-documents.svg" bytes read 1185 written 0
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|1185|0|0|0|2f696d616765732f757365722f6b79632d646f63756d656e74732e737667|]
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC close "/images/user/profil.svg" bytes read 1065 written 0
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|1065|0|0|0|2f696d616765732f757365722f70726f66696c2e737667|]
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC open "/images/user/bounty.svg" flags READ mode 0666
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC open "/images/user/logout.svg" flags READ mode 0666
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC close "/images/user/bounty.svg" bytes read 1569 written 0
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|1569|0|0|0|2f696d616765732f757365722f626f756e74792e737667|]
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC close "/images/user/logout.svg" bytes read 929 written 0
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|929|0|0|0|2f696d616765732f757365722f6c6f676f75742e737667|]
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC open "/images/user/dashboard-inactive.svg" flags READ mode 0666
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC open "/images/user/section.svg" flags READ mode 0666
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC close "/images/user/dashboard-inactive.svg" bytes read 1865 written 0
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|1865|0|0|0|2f696d616765732f757365722f64617368626f6172642d696e6163746976652e737667|]
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC close "/images/user/section.svg" bytes read 3350 written 0
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|3350|0|0|0|2f696d616765732f757365722f73656374696f6e2e737667|]
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC open "/images/user/bounty-translation.svg" flags READ mode 0666
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC open "/images/user/background.svg" flags READ mode 0666
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC close "/images/user/bounty-translation.svg" bytes read 12222 written 0
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|12222|0|0|0|2f696d616765732f757365722f626f756e74792d7472616e736c6174696f6e2e737667|]
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC close "/images/user/background.svg" bytes read 1044 written 0
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|1044|0|0|0|2f696d616765732f757365722f6261636b67726f756e642e737667|]
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC open "/images/team/ambassador-2.jpeg" flags READ mode 0666
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC open "/images/team/twitter.svg" flags READ mode 0666
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC close "/images/team/ambassador-2.jpeg" bytes read 18102 written 0
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|18102|0|0|0|2f696d616765732f7465616d2f616d6261737361646f722d322e6a706567|]
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC open "/images/team/ambassador-3.jpeg" flags READ mode 0666
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC close "/images/team/twitter.svg" bytes read 14183 written 0
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|14183|0|0|0|2f696d616765732f7465616d2f747769747465722e737667|]
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC close "/images/team/ambassador-3.jpeg" bytes read 37704 written 0
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|37704|0|0|0|2f696d616765732f7465616d2f616d6261737361646f722d332e6a706567|]
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC open "/images/team/LinkedIn.svg" flags READ mode 0666
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC open "/images/team/team-11.jpeg" flags READ mode 0666
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC close "/images/team/LinkedIn.svg" bytes read 2534 written 0
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|2534|0|0|0|2f696d616765732f7465616d2f4c696e6b6564496e2e737667|]
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC close "/images/team/team-11.jpeg" bytes read 34691 written 0
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|34691|0|0|0|2f696d616765732f7465616d2f7465616d2d31312e6a706567|]
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC open "/images/team/team-1.png" flags READ mode 0666
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC open "/images/team/youtube.svg" flags READ mode 0666
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC close "/images/team/team-1.png" bytes read 44758 written 0
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|44758|0|0|0|2f696d616765732f7465616d2f7465616d2d312e706e67|]
+Apr  2 17:09:57 10.71.51.0 u95941086-MBC open "/images/team/team-6.jpeg" flags READ mode 0666
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC close "/images/team/youtube.svg" bytes read 1841 written 0
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC [10.71.51.0|get|1|1841|0|0|0|2f696d616765732f7465616d2f796f75747562652e737667|]
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC close "/images/team/team-6.jpeg" bytes read 14938 written 0
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC [10.71.51.0|get|1|14938|0|0|0|2f696d616765732f7465616d2f7465616d2d362e6a706567|]
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC open "/images/team/facebook.svg" flags READ mode 0666
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC open "/images/team/team-12.png" flags READ mode 0666
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC close "/images/team/facebook.svg" bytes read 2267 written 0
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|2267|0|0|0|2f696d616765732f7465616d2f66616365626f6f6b2e737667|]
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC close "/images/team/team-12.png" bytes read 26371 written 0
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|26371|0|0|0|2f696d616765732f7465616d2f7465616d2d31322e706e67|]
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC open "/images/team/team-7.jpeg" flags READ mode 0666
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC open "/images/team/team-13.png" flags READ mode 0666
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC close "/images/team/team-7.jpeg" bytes read 36842 written 0
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|36842|0|0|0|2f696d616765732f7465616d2f7465616d2d372e6a706567|]
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC close "/images/team/team-13.png" bytes read 31514 written 0
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|31514|0|0|0|2f696d616765732f7465616d2f7465616d2d31332e706e67|]
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC open "/images/team/team-8.jpeg" flags READ mode 0666
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC open "/images/team/team-10.png" flags READ mode 0666
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC close "/images/team/team-8.jpeg" bytes read 37330 written 0
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|37330|0|0|0|2f696d616765732f7465616d2f7465616d2d382e6a706567|]
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC close "/images/team/team-10.png" bytes read 35694 written 0
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|35694|0|0|0|2f696d616765732f7465616d2f7465616d2d31302e706e67|]
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC open "/images/team/team.svg" flags READ mode 0666
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC close "/images/team/team.svg" bytes read 0 written 0
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|0|0|0|0|2f696d616765732f7465616d2f7465616d2e737667|]
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC open "/images/team/advisor-1.png" flags READ mode 0666
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC open "/images/team/advisor-2.png" flags READ mode 0666
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC close "/images/team/advisor-1.png" bytes read 107877 written 0
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|107877|0|0|0|2f696d616765732f7465616d2f61647669736f722d312e706e67|]
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC close "/images/team/advisor-2.png" bytes read 105396 written 0
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|105396|0|0|0|2f696d616765732f7465616d2f61647669736f722d322e706e67|]
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC open "/images/team/team-4.jpeg" flags READ mode 0666
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC close "/images/team/team-4.jpeg" bytes read 32181 written 0
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|32181|0|0|0|2f696d616765732f7465616d2f7465616d2d342e6a706567|]
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC open "/images/team/advisor-3.png" flags READ mode 0666
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC open "/images/team/team-5.jpeg" flags READ mode 0666
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC close "/images/team/advisor-3.png" bytes read 125692 written 0
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|125692|0|0|0|2f696d616765732f7465616d2f61647669736f722d332e706e67|]
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC close "/images/team/team-5.jpeg" bytes read 20868 written 0
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|20868|0|0|0|2f696d616765732f7465616d2f7465616d2d352e6a706567|]
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC open "/images/team/team-9.jpeg" flags READ mode 0666
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC open "/images/team/team-2.jpeg" flags READ mode 0666
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC close "/images/team/team-9.jpeg" bytes read 16775 written 0
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|16775|0|0|0|2f696d616765732f7465616d2f7465616d2d392e6a706567|]
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC close "/images/team/team-2.jpeg" bytes read 36283 written 0
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|36283|0|0|0|2f696d616765732f7465616d2f7465616d2d322e6a706567|]
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC open "/images/team/.DS_Store" flags READ mode 0666
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC open "/images/team/advisor-4.jpeg" flags READ mode 0666
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC close "/images/team/.DS_Store" bytes read 8196 written 0
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|8196|0|0|0|2f696d616765732f7465616d2f2e44535f53746f7265|]
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC open "/images/team/ambassador-1.jpeg" flags READ mode 0666
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC close "/images/team/advisor-4.jpeg" bytes read 20787 written 0
+Apr  2 17:09:58 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|20787|0|0|0|2f696d616765732f7465616d2f61647669736f722d342e6a706567|]
+Apr  2 17:09:59 10.71.51.0 u95941086-MBC close "/images/team/ambassador-1.jpeg" bytes read 4795 written 0
+Apr  2 17:09:59 10.71.51.0 u95941086-MBC [10.71.51.0|get|1|4795|0|0|0|2f696d616765732f7465616d2f616d6261737361646f722d312e6a706567|]
+Apr  2 17:09:59 10.71.51.0 u95941086-MBC open "/images/team/team-3.jpeg" flags READ mode 0666
+Apr  2 17:09:59 10.71.51.0 u95941086-MBC open "/images/team/team.png" flags READ mode 0666
+Apr  2 17:09:59 10.71.51.0 u95941086-MBC close "/images/team/team-3.jpeg" bytes read 36650 written 0
+Apr  2 17:09:59 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|36650|0|0|0|2f696d616765732f7465616d2f7465616d2d332e6a706567|]
+Apr  2 17:09:59 10.71.51.0 u95941086-MBC close "/images/team/team.png" bytes read 5930 written 0
+Apr  2 17:09:59 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|5930|0|0|0|2f696d616765732f7465616d2f7465616d2e706e67|]
+Apr  2 17:09:59 10.71.51.0 u95941086-MBC open "/logs/access.log.13.7.gz" flags READ mode 0666
+Apr  2 17:09:59 10.71.51.0 u95941086-MBC open "/logs/access.log.13.4.gz" flags READ mode 0666
+Apr  2 17:09:59 10.71.51.0 u95941086-MBC close "/logs/access.log.13.7.gz" bytes read 360 written 0
+Apr  2 17:09:59 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|360|0|0|0|2f6c6f67732f6163636573732e6c6f672e31332e372e677a|]
+Apr  2 17:09:59 10.71.51.0 u95941086-MBC open "/logs/access.log.10.gz" flags READ mode 0666
+Apr  2 17:09:59 10.71.51.0 u95941086-MBC close "/logs/access.log.13.4.gz" bytes read 4337 written 0
+Apr  2 17:09:59 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|4337|0|0|0|2f6c6f67732f6163636573732e6c6f672e31332e342e677a|]
+Apr  2 17:09:59 10.71.51.0 u95941086-MBC close "/logs/access.log.10.gz" bytes read 6300 written 0
+Apr  2 17:09:59 10.71.51.0 u95941086-MBC [10.71.51.0|get|0|6300|0|0|0|2f6c6f67732f6163636573732e6c6f672e31302e677a|]
+Apr  2 17:09:59 10.71.51.0 u95941086-MBC open "/logs/access.log.09.gz" flags READ mode 0666
+Apr  2 17:09:59 10.71.51.0 u95941086-MBC open "/logs/sftp.log" flags READ mode 0666

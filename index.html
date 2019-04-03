@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <noscript><meta http-equiv="refresh" content="0; url=./en/" /> </noscript>
+  </head>
+  <body>
+    <script>
+      var loc = window.location.pathname;
+      var lang = navigator.language.toLocaleLowerCase();
+      var langs = ["fr", "en"];
+      var found = false;
+      loc = loc.substring(0, loc.lastIndexOf("/"));
+
+      for (var i = 0; i < langs.length; i++) {
+        var v = langs[i];
+        if (lang.indexOf(v) == 0 && !found) {
+          found = true;
+          window.location.pathname = loc + "/" + v + "/";
+        }
+      }
+
+      if (!found) {
+        window.location.pathname = loc + "/en/";
+      }
+    </script>
+  </body>
+</html>
