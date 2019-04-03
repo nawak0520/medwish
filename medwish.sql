@@ -1,4 +1,4 @@
-DROP DATABASE medwish;
+﻿DROP DATABASE medwish;
 CREATE DATABASE medwish;
 USE medwish;
 
@@ -10,6 +10,7 @@ USE medwish;
 
 CREATE TABLE Users(
         Users_Id           Int  Auto_increment  NOT NULL ,
+	Users_Password     Varchar (50) NOT NULL ,
         Users_Name         Varchar (50) NOT NULL ,
         Users_Surname      Varchar (50) NOT NULL ,
         Users_Gender       Bool NOT NULL ,
@@ -22,6 +23,7 @@ CREATE TABLE Users(
         Users_State        Varchar (50) NOT NULL ,
         Users_Country      Varchar (50) NOT NULL ,
         Users_Phone        Varchar (20) NOT NULL ,
+	Users_Mail	   Varchar (50) NOT NULL ,
         Users_Job          Varchar (20) NOT NULL ,
         Users_Valid        Bool NOT NULL ,
         Users_Function     Int NOT NULL ,
