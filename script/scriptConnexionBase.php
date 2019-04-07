@@ -1,25 +1,27 @@
 <?php
 function connexionBase()
 {
-   // Paramètre de connexion serveur
+   // Paramètre de connexion au serveur de la BDD
    $host = "localhost";
-   $login= "root";     // Votre loggin d'accès au serveur de BDD 
-   $password="1234";    // Le Password pour vous identifier auprès du serveur
-   $base = "medwish";    // La bdd avec laquelle vous voulez travailler 
+   $login= "root";      
+   $password="123456";    
+   $base = "medwish";    
  
-   try 
-   {
-        $db = new PDO('mysql:host=' .$host. ';charset=utf8;dbname=' .$base, $login, $password);
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+   try // tentative connexion a BDD
+    {
+        $db = new PDO('mysql:host=' .$host. ';charset=utf8;dbname=' .$base, $login, $password); 
+        
+        //genere un rapport d'erreur si probleme sur BDD
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
+        
         return $db;
-    } 
-    catch (Exception $e) 
+    }
+
+    catch (Exception $e) // recuperation et affichage de l'erreur de connexion
     {
         echo 'Erreur : ' . $e->getMessage() . '<br>';
         echo 'N° : ' . $e->getCode() . '<br>';
         die('Connexion au serveur impossible.');
     } 
-
-    
 }
 ?>

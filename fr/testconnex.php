@@ -9,17 +9,17 @@
 <body>
     
 <?php     
-    require "C:\laragon\www\web\medwish\script\scriptConnexionBase.php"; // Inclusion de notre bibliothèque de fonctions
+    require "C:\laragon\www\PHP\Medwish\medwish\script\scriptConnexionBase.php"; // Inclusion de notre bibliothèque de fonctions
  
     $db = connexionBase(); // Appel de la fonction de connexion
 
     // Renvoi de l'enregistrement sous forme d'un objet
 
-    $requete = "SELECT * FROM users ";
+    $requete = "SELECT * FROM users "; //requete sql
 
-    $result = $db->query($requete);
+    $result = $db->query($requete); //envoie de la req
 
-    var_dump($db);
+    var_dump($db); //retour de la BDD
 
     if (!$result) {
         $tableauErreurs = $db->errorInfo();
@@ -41,7 +41,7 @@
             <th scope="col" class ="titreCentre">Users_Password</th>
             <th scope="col" class ="titreCentre">Users_Name</th>
             <th scope="col" class ="titreCentre">Users_Surname</th>
-            <th scope="col" class ="titreCentre">Users_Gender</th>
+            <!-- <th scope="col" class ="titreCentre">Users_Gender</th>
             <th scope="col" class ="titreCentre">Users_Nationnality</th>
             <th scope="col" class ="titreCentre">Users_Birthdate</th>
             <th scope="col" class ="titreCentre">Users_Address1</th>
@@ -50,7 +50,7 @@
             <th scope="col" class ="titreCentre">Users_CP</th>
             <th scope="col" class ="titreCentre">Users_State</th>
             <th scope="col" class ="titreCentre">Users_Country</th>
-            <th scope="col" class ="titreCentre">Users_Phone</th>
+            <th scope="col" class ="titreCentre">Users_Phone</th> -->
             <th scope="col" class ="titreCentre">Users_Mail</th>
             <th scope="col" class ="titreCentre">Users_Job</th>
             </tr>
@@ -65,16 +65,16 @@
                 echo"<td>".$row->Users_Password."</td>";
                 echo"<td>".$row->Users_Name."</td>";
                 echo"<td>".$row->Users_Surname."</td>";
-                echo"<td>".$row->Users_Gender."</td>";
-                echo"<td>".$row->Users_Nationnality."</td>";
-                echo"<td>".$row->Users_Birthdate."</td>";
-                echo"<td>".$row->Users_Address1."</td>";
-                echo"<td>".$row->Users_Address2."</td>";
-                echo"<td>".$row->Users_City."</td>";
-                echo"<td>".$row->Users_CP."</td>";
-                echo"<td>".$row->Users_State."</td>";
-                echo"<td>".$row->Users_Country."</td>";
-                echo"<td>".$row->Users_Phone."</td>";
+                // echo"<td>".$row->Users_Gender."</td>";
+                // echo"<td>".$row->Users_Nationnality."</td>";
+                // echo"<td>".$row->Users_Birthdate."</td>";
+                // echo"<td>".$row->Users_Address1."</td>";
+                // echo"<td>".$row->Users_Address2."</td>";
+                // echo"<td>".$row->Users_City."</td>";
+                // echo"<td>".$row->Users_CP."</td>";
+                // echo"<td>".$row->Users_State."</td>";
+                // echo"<td>".$row->Users_Country."</td>";
+                // echo"<td>".$row->Users_Phone."</td>";
                 echo"<td>".$row->Users_Mail."</td>";
                 echo"<td>".$row->Users_Job."</td>";
                 echo"</tr>";
