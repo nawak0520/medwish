@@ -4,13 +4,14 @@
 		<link rel="stylesheet" href="../style/modal.css" />
 	</head>
 	<body class="signin">
-		<form action="../user/dashboard.html" method="POST">
+		<form action="../script/scriptLogin.php" method="POST">
 			<h2>Log in </h2>
 			<img src="../images/padlock.svg" />
 			<hr />
-			<div><label>Email</label> <input type="email" required /></div>
-			<div><label>Password</label> <input type="password" required /></div>
-			<a href="../forgot.html" class="forgot">FORGOT PASSWORD?</a> <button>LOG IN</button>
+			<div><label>Email</label> <input type="email" required name="email_users" id="email_users" /></div>
+			<div><label>Password</label> <input type="password" name="pwd_users" id="pwd_users" required /></div>
+			<a href="../forgot.html" class="forgot">FORGOT PASSWORD?</a> 
+			<button type ="submit" value ="LOG_IN">LOG IN</button>
 			<div class="bottom-text">Not on Medwish yet? <a href="signup.html">REGISTER</a></div>
 		</form>
 		<div class="separator">
