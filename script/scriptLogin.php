@@ -1,8 +1,7 @@
 <?php 
 
 
-echo $_POST['email_users'];
-echo $_POST['pwd_users'];
+
 $Users_Mail = $_POST['email_users'];
 $Users_Password = $_POST['pwd_users'];
 
@@ -13,10 +12,10 @@ $db = connexionBase(); // Appel de la fonction de connexion en base
 //req sql qui va tester directement l'existence de l'utilisateur en base
 $requete = "SELECT * FROM users WHERE Users_Mail = '$Users_Mail' AND Users_Password = '$Users_Password'";
 
-    
+//exécution req    
 $result = $db->query($requete);
 
-
+//test si $result est vide avec renvoie d erreur
     if (!$result) 
     {
         $tableauErreurs = $db->errorInfo();
@@ -24,20 +23,19 @@ $result = $db->query($requete);
         die("Erreur dans la requête");
     } 
 
+// test si $result possède des lignes
     if ($result->rowCount() == 0) 
     {
-        // Pas d'enregistrement
+        // ouverture session 
         session_start();
 
         $_SESSION["flag"] = false;
-        echo '<body onLoad="alert(\'Membre non reconnu...\'); window.location=\'C:\laragon\www\PHP\Medwish\medwish\fr\login.html\'">';
-        //header("Location:formSessionStart.php");
-        
-        
+        // affiche le message d'alerte + redirection sur la page login.html
+        echo '<body onLoad="alert(\'Membre non reconnu...Réessayer\'); window.location=\'../fr/login.html\';">';           
     }
     else
-    {
-
+    {   
+        // ouverture session
         session_start();
 
         $_SESSION["login_users"] = $row->nom_users;
@@ -47,8 +45,8 @@ $result = $db->query($requete);
         $_SESSION["flag"] = true;
 
         header("Location:../user/dashboard.html");
-        exit;
-            
-        
+        exit;  
     }
+
+
     ?>
