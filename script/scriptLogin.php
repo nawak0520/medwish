@@ -12,7 +12,7 @@ $db = connexionBase(); // Appel de la fonction de connexion en base
 //req sql qui va tester directement l'existence de l'utilisateur en base
 $requete = "SELECT * FROM users WHERE Users_Mail = '$Users_Mail' AND Users_Password = '$Users_Password'";
 
-//exécution req    
+//exécut req    
 $result = $db->query($requete);
 
 //test si $result est vide avec renvoie d erreur

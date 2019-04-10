@@ -1,10 +1,9 @@
 <html>
 	<head>
 		<title>Log in - Medwish</title>
-		<link rel="stylesheet" href="../style/modal.css" />
+		<link rel="stylesheet" href="../style/popupStyle.css" />
 	</head>
 	<body class="signin">
-			
 			
 		<form action="../script/scriptLogin.php" method="POST">
 			<h2>Log in </h2>
@@ -12,11 +11,12 @@
 			<hr />
 			
 			<div><label>Email</label> <input type="email" required name="email_users" id="email_users" /></div>
-			<div><label>Password</label> <input type="password" name="pwd_users" id="pwd_users" required /></div>
-			
-			<a href="../forgot.html" class="forgot">FORGOT PASSWORD?</a> 
-			<button type ="submit" value ="LOG_IN">LOG IN</button>
-			<div class="bottom-text">Not on Medwish yet? <a href="signup.html">REGISTER</a></div>
+			<div><label>Mot de passe</label> <input type="password" name="pwd_users" id="pwd_users" required /></div>
+			<div>
+			<a class="forgot" onclick="javascript:openForm()" id ="btnModalEmail">Mot de passe oubli&eacute;?</a>
+		</div>
+			<button type ="submit" value ="LOG_IN" id = "LOG_IN">LOG IN</button>
+			<div class="bottom-text">Pas de compte Medwish?<a href="signup.html">S'INSCRIRE</a></div>
 		</form>
 		<div class="separator">
 			<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
@@ -31,6 +31,73 @@
 				your needs in a simple, easy and intuotive way
 			</p>
 		</div>
-		
+			<!-- Le Modal forgotPwd -->
+			<div id="forgotPwd" class="modal">
+
+			<!-- Contenu Modal  -->
+				<div class="modal-content">
+					<span class="close" onclick="javascript:closeForm()" >&times;</span>
+					<form action="../script/scriptForgotPwd.php" class="form" method="POST">
+						
+						<h2>Mot de passe oubli&eacute;?</h2>
+						
+						<div><span> Entrer votre <strong>adresse Email</strong> ou votre <strong>nom d'utilsateur</strong>
+							de votre compte et cliquer sur envoyer</span></div><br>
+						<div><label>Email</label> <input type="email" required name="email_users" id="email_users_bis" /></div>
+							
+						
+						<button type ="submit" value ="envoiMailBis" id = "envoiMailBis" >ENVOIE MAIL</button>
+						</form>
+				</div>
+			</div>
+			<script type="text/javascript">
+				
+				// fonction qui ouvre le modal forgotPwd par le lien "Mot de passe oublié"
+				function openForm() {
+					var modal = document.getElementById('forgotPwd'); //recup du modal forgotPwd
+					var btn = document.getElementById("btnModalEmail"); //recupe du btn qui ouvre le modal forgotPwd
+					modal.style.display = "block"; //change display affichage du modal
+				}
+
+				// fonction qui ferme le modal forgotPwd par la croix du formulaire
+				function closeForm() {
+				
+					var modal = document.getElementById('forgotPwd'); //recup du modal forgotPwd
+					var span = document.getElementsByClassName("close")[0]; //recup btn qui ferme le modal forgotPwd
+					modal.style.display = "none"; //change display non-affichage du modal
+				}
+
+			</script>
+			<!-- <div class="form-popup" id="myForm">
+				<form action="../script/scriptLogin.php" class="form-container" method="POST">
+				<h2>Mot de passe oubli&eacute;?</h2>
+				
+				<div><span> Entrer votre <strong>adresse Email</strong> ou votre <strong>nom d'utilsateur</strong>
+					 de votre compte et cliquer sur envoyer</span></div>
+				<div><label>Email</label> <input type="email" required name="email_users" id="email_users" /></div>
+					
+				
+				<button type ="submit" value ="LOG_IN">LOG IN</button>
+				</form>
+			</div> -->
+			
+		<!-- <script type="text/javascript">
+
+			function OuvrirPopup(page) {
+				var hauteur = 500;
+				var largeur = 500;
+				var top=(screen.height-hauteur)/2;
+				var left=(screen.width-largeur)/2;
+				 window.open(page,"","top="+top+",left="+left+",width="+largeur+",height="+hauteur+",menubar=no, status=no, directories=no, location=no, scrollbars=no, resizable=no");
+			  }
+
+			function openForm() {
+  				document.getElementById("myForm").style.display = "block";
+			}
+
+			function closeForm() {
+  				document.getElementById("myForm").style.display = "none";
+			}
+		</script> -->
 	</body>
 </html>
