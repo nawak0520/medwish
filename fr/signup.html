@@ -1,24 +1,25 @@
 <html>
 	<head>
-		<title>Register - Medwish</title>
+		<title>S'INSCRIRE - Medwish</title>
 		<link rel="stylesheet" href="../style/modal.css" />
 	</head>
+	
 	<body class="signup">
-		<form action="./user/dashboard.html" method="POST">
-			<h2>Register</h2>
+		<form action="../script/scriptAddUser.php" onsubmit="return verifMdp(this)" method ="POST">
+			<h2>S'INSCRIRE</h2>
 			<div class="company">
 				<input type="checkbox" />
-				<span> Check here for Company, investment fund, association, foundation, etc ...</span>
+				<span> Cochez ici si vous agissez pour le compte d'une societe, pour un fond d'investissement, une association...</span>
 			</div>
-			<div><label>Login</label> <input type="text" placeholder="Login" required /></div>
-			<div><label>Email</label> <input type="email" placeholder="Provide an active address" required /></div>
-			<div><label>Password</label> <input type="password" placeholder="Minimum 7 characters" required /></div>
+			<div><label>Login</label> <input type="text" placeholder="Login" name="login" id="login" required /></div>
+			<div><label>Email</label> <input type="email" placeholder="Provide an active address" name ="eMail" id="eMail" required /></div>
+			<div><label>Mot de passe</label> <input type="password" placeholder="Minimum 7 characters" name ="Mdp" id="Mdp" required /></div>
 			<div>
-				<label>Confirm Password</label> <input type="password" placeholder="Passwords must match" required />
+				<label>Confirmer le Mot de passe</label> <input type="password" placeholder="Passwords must match" name ="Pwd" id="Pwd" required />
 			</div>
-			<div><input type="checkbox" required /> I agree with service <a>Terms & Conditions</a></div>
-			<button>REGISTER</button>
-			<div class="bottom-text">Already have an account? <a href="./login.html">LOG IN</a></div>
+			<div><input type="checkbox" required /> J'accepte les conditions g&eacute;n&eacute;rales <a>Termes & Conditions</a></div>
+			<button  type ="submit" value ="REGISTER" name="REGISTER" id = "REGISTER">REGISTER</button>
+			<div class="bottom-text">d&eacute;j&agrave; un compte ? <a href="../login.html">LOG IN</a></div>
 		</form>
 		<div class="separator">
 			<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
@@ -26,12 +27,32 @@
 			</svg>
 		</div>
 		<div class="details">
-			<img src="images/logo.svg" />
+			<img src="../images/logo.svg" />
 			<h1>Welcome</h1>
-			<p>
-				Wether you are an expert or a beginner. Bitarea is going to become the first platform which will faster
-				all your needs in a simple, easy and intuotive way
+			<p>	
+				Que vous soyez un expert ou un d&eacute;butant. Bitarea va devenir la premi&egrave;re plateforme qui acc&eacute;l&eacute;rera
+				tous vos besoins de mani&egrave;re simple, facile et intuitive
 			</p>
 		</div>
+		<script type="text/javascript">
+		
+			function verifMdp(form){
+				
+				var Mdp = form.Mdp.value;
+				alert(Mdp);
+				var Pwd = form.Pwd.value;
+				alert(Pwd);
+				if ( Mdp == Pwd) {
+					return true;
+				}
+				else {
+					alert('Les mots de passes ne correspondent pas, Recommencer.')
+					return false;
+				}
+
+			}
+		
+		
+		</script>
 	</body>
 </html>

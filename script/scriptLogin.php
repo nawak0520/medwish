@@ -26,18 +26,19 @@ $result = $db->query($requete);
 // test si $result possède des lignes
     if ($result->rowCount() == 0) 
     {
+        deconnexionBase($db, $result);
         // ouverture session 
         session_start();
-
         $_SESSION["flag"] = false;
+
         // affiche le message d'alerte + redirection sur la page login.html
         echo '<body onLoad="alert(\'Membre non reconnu...Réessayer\'); window.location=\'../fr/login.html\';">';           
     }
     else
     {   
+        deconnexionBase($db, $result);
         // ouverture session
         session_start();
-
         $_SESSION["login_users"] = $row->nom_users;
         $_SESSION["pwd_users"] = $pwd_users;
         $_SESSION["email_users"] = $mail_users;

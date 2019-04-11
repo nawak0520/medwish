@@ -1,0 +1,53 @@
+<?php 
+
+
+
+$Users_Mail = $_POST['email_users_bis'];
+$Users_Login = $_POST['email_users_bis'];
+
+
+require "scriptConnexionBase.php"; // Inclusion de notre bibliothèque de fonctions
+$db = connexionBase(); // Appel de la fonction de connexion en base
+
+//req sql qui va tester directement l'existence du mail ou du login en base
+$requete = "SELECT * FROM users WHERE Users_Mail = '$Users_Mail' or Users_Login = '$Users_Login'";
+
+//exécut req    
+$result = $db->query($requete);
+
+//test si $result est vide avec renvoie d erreur
+    if (!$result) 
+    {
+        $tableauErreurs = $db->errorInfo();
+        echo $tableauErreur[2]; 
+        die("Erreur dans la requête");
+    } 
+
+// test si $result possède des lignes
+    if ($result->rowCount() == 0) 
+    {
+        deconnexionBase($db, $result);
+        // ouverture session 
+        session_start();
+        $_SESSION["flag"] = false;
+
+        // affiche le message d'alerte + redirection sur la page login.html
+        echo '<body onLoad="alert(\'mail ou Login non reconnus\'); window.location=\'../fr/login.html\';">';           
+    }
+    else
+    {   
+        deconnexionBase($db, $result);
+        // ouverture session
+        session_start();
+        $_SESSION["login_users"] = $row->nom_users;
+        $_SESSION["pwd_users"] = $pwd_users;
+        $_SESSION["email_users"] = $mail_users;
+        $_SESSION["id_users"] = $row->id_users;
+        $_SESSION["flag"] = true;
+
+        header("Location:../user/dashboard.html");
+        exit;  
+    }
+
+
+    ?>

@@ -1,13 +1,13 @@
 <?php
 function connexionBase()
 {
-   // Paramètre de connexion au serveur de la BDD
-   $host = "localhost";
-   $login= "root";      
-   $password="123456";    
-   $base = "medwish";    
+    // Paramètre de connexion au serveur de la BDD
+    $host = "localhost";
+    $login= "root";      
+    $password="123456";    
+    $base = "medwish";    
  
-   try // tentative connexion a BDD
+    try // tentative connexion a BDD
     {
         $db = new PDO('mysql:host=' .$host. ';charset=utf8;dbname=' .$base, $login, $password); 
         
@@ -24,4 +24,14 @@ function connexionBase()
         die('Connexion au serveur impossible.');
     } 
 }
+
+function deconnexionBase($db, $result)
+{
+
+    $db = null;
+    $result = null;
+
+}
+
+
 ?>
