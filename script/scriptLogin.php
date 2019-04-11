@@ -10,7 +10,8 @@ require "scriptConnexionBase.php"; // Inclusion de notre bibliothèque de foncti
 $db = connexionBase(); // Appel de la fonction de connexion en base
 
 //req sql qui va tester directement l'existence de l'utilisateur en base
-$requete = "SELECT * FROM users WHERE Users_Mail = '$Users_Mail' AND Users_Password = '$Users_Password'";
+$requete = "SELECT * FROM users WHERE Users_Mail ='$Users_Mail' ";
+//AND Users_Password = '$Users_Password'
 
 //exécut req    
 $result = $db->query($requete);
@@ -26,27 +27,43 @@ $result = $db->query($requete);
 // test si $result possède des lignes
     if ($result->rowCount() == 0) 
     {
-        deconnexionBase($db, $result);
         // ouverture session 
         session_start();
         $_SESSION["flag"] = false;
 
+        deconnexionBase($db, $result);
+
         // affiche le message d'alerte + redirection sur la page login.html
         echo '<body onLoad="alert(\'Membre non reconnu...Réessayer\'); window.location=\'../fr/login.html\';">';           
     }
-    else
+    else if ($result->rowCount() > 0) 
     {   
-        deconnexionBase($db, $result);
-        // ouverture session
-        session_start();
-        $_SESSION["login_users"] = $row->nom_users;
-        $_SESSION["pwd_users"] = $pwd_users;
-        $_SESSION["email_users"] = $mail_users;
-        $_SESSION["id_users"] = $row->id_users;
-        $_SESSION["flag"] = true;
+        $row = $result->fetch((PDO::FETCH_OBJ));
+        //var_dump($row);
+        $verifMdp = $row->Users_Password;
+        
+        if (password_verify($Users_Password, $verifMdp))
+        {
+            // ouverture session
+            session_start();
+            $_SESSION["login_users"] = $row->Users_Name;
+            $_SESSION["pwd_users"] = $Users_Password;
+            $_SESSION["email_users"] = $Users_Mail;
+            $_SESSION["id_users"] = $row->Users_Id;
+            $_SESSION["flag"] = true;
 
-        header("Location:../user/dashboard.html");
-        exit;  
+            //fermeture connexion base
+            deconnexionBase($db, $result);
+            
+            header("Location:../user/dashboard.html");
+            exit; 
+        }
+        
+
+        else {
+        echo '<body onLoad="alert(\'Membre non reconnu...Réessayer\'); window.location=\'../fr/login.html\';">';           
+    }
+        
     }
 
 

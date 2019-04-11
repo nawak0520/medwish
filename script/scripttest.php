@@ -79,3 +79,5 @@ else
 {
     echo '<body onLoad="alert(\'Membre existant... entrez nouveau login ou email\'); window.location=\'../fr/signup.html\';">';
 }
+
+

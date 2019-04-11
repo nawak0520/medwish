@@ -33,7 +33,7 @@
     }
     ?>
             
-            <table >
+            <!-- <table >
             <thead>
             <tr>
             <th scope="col" class ="titreCentre">Users_Id</th>
@@ -50,14 +50,14 @@
             <th scope="col" class ="titreCentre">Users_CP</th>
             <th scope="col" class ="titreCentre">Users_State</th>
             <th scope="col" class ="titreCentre">Users_Country</th>
-            <th scope="col" class ="titreCentre">Users_Phone</th> -->
+            <th scope="col" class ="titreCentre">Users_Phone</th> 
             <th scope="col" class ="titreCentre">Users_Mail</th>
             <th scope="col" class ="titreCentre">Users_Job</th>
             </tr>
-            </thead>
+            </thead>-->
             <?php
             
-            while ($row = $result->fetch(PDO::FETCH_OBJ))
+            /*while ($row = $result->fetch(PDO::FETCH_OBJ))
             {   
                 echo"<tr>";
                 echo"<td>".$row->Users_Id."</td>";
@@ -85,4 +85,4 @@
 
 
 </body>
-</html>
+</html> -->
