@@ -1,53 +1,73 @@
 <?php 
 
-
-
-$Users_Mail = $_POST['email_users_bis'];
-$Users_Login = $_POST['email_users_bis'];
-
-
-require "scriptConnexionBase.php"; // Inclusion de notre bibliothèque de fonctions
-$db = connexionBase(); // Appel de la fonction de connexion en base
-
-//req sql qui va tester directement l'existence du mail ou du login en base
-$requete = "SELECT * FROM users WHERE Users_Mail = '$Users_Mail' or Users_Login = '$Users_Login'";
-
-//exécut req    
-$result = $db->query($requete);
-
-//test si $result est vide avec renvoie d erreur
-    if (!$result) 
-    {
-        $tableauErreurs = $db->errorInfo();
-        echo $tableauErreur[2]; 
-        die("Erreur dans la requête");
-    } 
-
-// test si $result possède des lignes
-    if ($result->rowCount() == 0) 
-    {
-        deconnexionBase($db, $result);
-        // ouverture session 
-        session_start();
-        $_SESSION["flag"] = false;
-
-        // affiche le message d'alerte + redirection sur la page login.html
-        echo '<body onLoad="alert(\'mail ou Login non reconnus\'); window.location=\'../fr/login.html\';">';           
+echo($_POST['envoiMailBis']);
+echo($_POST['recupMail']);
+// verifie que le submit est ok
+if (isset($_POST['envoiMailBis']))
+{   
+    // verifie que la variable est non vide
+    if (!empty($_POST['recupMail'])){
+        
+        // supprime tout les caract non attendu, evite les injections de code
+        $mail = htmlspecialchars($_POST['recupMail']);
+        echo("33333333333");
+        if (filter_var($mail, FILTER_VALIDATE_EMAIL)) //verifie un mail valide
+        {
+            echo("cccccccccccccccccccccc");
+        }
+        else 
+        {
+            echo '<body onLoad="alert(\'erreur dans le mail\'); window.location=\'../fr/login.html\'; ">';
+        }
     }
-    else
-    {   
-        deconnexionBase($db, $result);
-        // ouverture session
-        session_start();
-        $_SESSION["login_users"] = $row->nom_users;
-        $_SESSION["pwd_users"] = $pwd_users;
-        $_SESSION["email_users"] = $mail_users;
-        $_SESSION["id_users"] = $row->id_users;
-        $_SESSION["flag"] = true;
-
-        header("Location:../user/dashboard.html");
-        exit;  
+    else 
+    {
+        echo '<body onLoad="alert(\'veuillez entrer votre mail\'); window.location=\'../fr/login.html\';">';
     }
+}
 
 
-    ?>
+
+// // recuperation du type de serveur par le mail (problème des passage de ligne source OpenClassrooms)
+// if (!preg_match("#^[a-z0-9._-]+@(hotmail|live|msn).[a-z]{2,4}$#", $mail))
+// {
+// 	$passage_ligne = "\r\n";
+// }
+// else
+// {
+// 	$passage_ligne = "\n";
+// }
+// <?php if(isset($error)) 
+// 						{ 
+// 							echo '<span style="color:red">'.$error.'</span>'; 
+// 						}
+// 						else { echo ""; } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+?>
+
+  
