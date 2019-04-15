@@ -36,19 +36,19 @@
 					session_start();
 					$db = connexionBase(); // Appel de la fonction de connexion
 					echo($_SESSION['id_users']);
-					echo($_SESSION["login_users"] );
-					echo( $_SESSION["pwd_users"]);
+					echo($_SESSION["login_users"]);
+					echo($_SESSION["pwd_users"]);
 					echo($_SESSION["email_users"]); 
-					echo($_SESSION["id_users"] );
+					echo($_SESSION["id_users"]);
 					echo($_SESSION["flag"]);
 					$requete = "SELECT * FROM Users WHERE Users_Id=".$_SESSION['id_users'];
 				
 					$result = $db->query($requete);
 					$Use = $result->fetch(PDO::FETCH_OBJ);
-					//$pro_cat_id = $produit->pro_cat_id;
+					$result = null;					
 
 				?>
-				<form class="row" method="POST">
+				<form class="row" method="POST" action="../script/scriptModifUser.php">
 					<div class="column">
 						<div class="row"><label for="firstname">Name</label></div>
 						<div class="row">
@@ -57,7 +57,9 @@
 						</div>
 						
 						<div class="row">
-							<label for="gender">Gender</label> <label for="nationality">Nationality</label>
+							<label for="gender">Gender</label> <label for="nationality">Nationality<?php
+								
+									?></label>
 						</div>
 						<div class="row">
 							<select name="gender" >
@@ -80,29 +82,36 @@
 							</select>
 							<select name="nationality">
 							<?php 
-								$requete = "SELECT Nationality_Fr FROM 	Nationality ORDER BY Nationality_Id asc";
+								$requete2 = "SELECT * FROM Nationality ORDER BY Nationality_Id asc";
 							
-								$result = $db->query($requete);
+								$result2 = $db->query($requete2);
 								
-								if (!$result) 
+								if (!$result2) 
 								{
 									$tableauErreurs = $db->errorInfo();
 									echo $tableauErreur[2]; 
 									die("Erreur dans la requête");
 								}
 								
-								if ($result->rowCount() == 0) {
+								if ($result2->rowCount() == 0) {
 								// Pas d'enregistrement
 									die("La table est vide");
 								}
+								$nation = $Use->Users_Nationality_Id;
 
-								while ($row = $result->fetch(PDO::FETCH_OBJ)){
-								?>
-									<option value="<?=$row->Nationality_Id?>"><?=$row->Nationality_Fr?></option>
-									
-								<?php }
-								?>
-								
+								while ($row2 = $result2->fetch(PDO::FETCH_OBJ)){
+									if ($nation == $row2->Nationality_Id){
+									?>
+										<option value="<?=$row2->Nationality_Id?>" selected="selected"><?=$row2->Nationality_Fr?></option>
+									<?php 
+									}
+									else {
+									?>
+										<option value="<?=$row2->Nationality_Id?>"><?=$row2->Nationality_Fr?></option>
+									<?php 
+									}
+								}
+								$result2 =null?>
 							</select>
 						</div>
 						<div class="row"><label for="dateofbirth">Date of Birth</label></div>
@@ -118,29 +127,37 @@
 							<input name="zipcode" placeholder="Postal / Zip Code" class="left" value="<?php echo $Use->Users_CP; ?>"/>
 							<select name="county" class="left">
 							<?php 
-								$requete = "SELECT Country_fr_fr FROM Country ORDER BY Country_id asc";
+								$requete3 = "SELECT * FROM Country ORDER BY Country_id asc";
 							
-								$result = $db->query($requete);
+								$result3 = $db->query($requete3);
 								
-								if (!$result) 
+								if (!$result3) 
 								{
 									$tableauErreurs = $db->errorInfo();
 									echo $tableauErreur[2]; 
 									die("Erreur dans la requête");
 								}
 								
-								if ($result->rowCount() == 0) {
+								if ($result3->rowCount() == 0) {
 								// Pas d'enregistrement
 									die("La table est vide");
 								}
 
-								while ($row = $result->fetch(PDO::FETCH_OBJ)){
-								?>
-									<option value="<?=$row->Country_id?>"><?=$row->Country_fr_fr?></option>
-									
-								<?php }
-								?>
-								
+								$country = $Use->Users_Country_id;
+
+								while ($row3 = $result3->fetch(PDO::FETCH_OBJ)){
+									if ($country == $row3->Country_id){
+									?>
+										<option value="<?=$row3->Country_id?>" selected="selected"><?=$row3->Country_fr_fr?></option>
+									<?php 
+									}
+									else {
+									?>
+										<option value="<?=$row3->Country_id?>"><?=$row3->Country_fr_fr?></option>
+									<?php 
+									}
+								}
+								$result3 =null?>
 							</select>
 						</div>
 					</div>
@@ -152,12 +169,12 @@
 						<div class="row"><label>My personal ERC 20 compatible Wallet Adress </label></div>
 						<div class="row"><input name="" placeholder="0x73957709695E7.........." class="left" /></div>
 						<div class="row"><label>Phone Number </label></div>
-						<div class="row"><input name="" placeholder="" class="left" value ="<?php echo $Use->Users_Phone; ?> "/></div>
+						<div class="row"><input name="phone" placeholder="" class="left" value ="<?php echo $Use->Users_Phone; ?> "/></div>
 						<div class="row"><label>Mail address</label></div>
-						<div class="row"><input name="" placeholder="" class="left" value ="<?php echo $Use->Users_Mail	; ?> "/></div>
+						<div class="row"><input name="eMail" placeholder="" class="left" value ="<?php echo $Use->Users_Mail	; ?> "/></div>
 						<div class="row"><label>Profession </label></div>
-						<div class="row"><input name="" placeholder="" class="left" value ="<?php echo $Use->Users_Job; ?> "/></div>
-						<div class="row"><button type="submit">EDIT</button></div>
+						<div class="row"><input name="job" placeholder="" class="left" value ="<?php echo $Use->Users_Job; ?> "/></div>
+						<div class="row"><button type="submit" value ="EDIT" name="EDIT" id = "EDIT">EDIT</button></div>
 					</div>
 				</form>
 			</div>
