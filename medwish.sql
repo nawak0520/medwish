@@ -49,6 +49,7 @@ CREATE TABLE Country(
         Country_id       	Int  Auto_increment  NOT NULL ,
         Country_code      	Int NOT NULL ,
         Country_alpha2    	Varchar (3) NOT NULL ,
+        Country_alpha3    	Varchar (3) NOT NULL ,
         Country_en_gb 		Varchar (45) NOT NULL ,
         Country_fr_fr 		Varchar (45) NOT NULL
 	,CONSTRAINT Country_PK PRIMARY KEY (Country_id)
