@@ -37,9 +37,9 @@ if ($result1->rowCount() == 0)
     $db = connexionBase();
 
     //req d'insertion dans la Base  
-    $requete3 = "insert into users (Users_Login, Users_Password, Users_Name, Users_Surname, Users_Gender, Users_Nationnality,"." 
-    Users_Address1, Users_Address2, Users_City, Users_CP, Users_State, Users_Country, Users_Phone, Users_Mail, Users_Job)"." 
-    values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"; //req insertion en base
+    $requete3 = "insert into users (Users_Login, Users_Password, Users_Name, Users_Surname, Users_Gender, "." 
+    Users_Address1, Users_Address2, Users_City, Users_CP, Users_State, Users_Phone, Users_Mail, Users_Job)"." 
+    values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"; //req insertion en base
 
     $stmt = $db->prepare($requete3); //preparation req avec camouflage parametre
 
@@ -54,10 +54,9 @@ if ($result1->rowCount() == 0)
     $stmt->bindParam(9, $none);
     $stmt->bindParam(10, $none);
     $stmt->bindParam(11, $none);
-    $stmt->bindParam(12, $none);
+    $stmt->bindParam(12, $email);
     $stmt->bindParam(13, $none);
-    $stmt->bindParam(14, $email);
-    $stmt->bindParam(15, $none);
+
 
     $stmt->execute();
 
@@ -73,7 +72,7 @@ if ($result1->rowCount() == 0)
     $_SESSION["id_users"] = $row->Users_Id;
     $_SESSION["flag"] = true;
 
-    header("Location:../user/dashboard.html");         
+    header("Location:../fr/login.html");         
 }
 else 
 {

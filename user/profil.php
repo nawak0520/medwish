@@ -31,43 +31,116 @@
 		<div class="content">
 			<div class="panel">
 				<h2>Personal Information</h2>
+				<?php     
+					require "../script/scriptConnexionBase.php"; // Inclusion de notre bibliothèque de fonctions
+					session_start();
+					$db = connexionBase(); // Appel de la fonction de connexion
+					echo($_SESSION['id_users']);
+					echo($_SESSION["login_users"] );
+					echo( $_SESSION["pwd_users"]);
+					echo($_SESSION["email_users"]); 
+					echo($_SESSION["id_users"] );
+					echo($_SESSION["flag"]);
+					$requete = "SELECT * FROM Users WHERE Users_Id=".$_SESSION['id_users'];
+				
+					$result = $db->query($requete);
+					$Use = $result->fetch(PDO::FETCH_OBJ);
+					//$pro_cat_id = $produit->pro_cat_id;
+
+				?>
 				<form class="row" method="POST">
 					<div class="column">
 						<div class="row"><label for="firstname">Name</label></div>
 						<div class="row">
-							<input name="firstname" placeholder="First Name (Given Name)" />
-							<input name="lastname" placeholder="Last Name (Surname)" />
+							<input name="firstname" placeholder="Last Name (Surname)" value="<?php echo $Use->Users_Name; ?>"/>
+							<input name="lastname" placeholder="Last Name (Surname)" value="<?php echo $Use->Users_Surname; ?>"/>
 						</div>
-
+						
 						<div class="row">
 							<label for="gender">Gender</label> <label for="nationality">Nationality</label>
 						</div>
 						<div class="row">
-							<select name="gender">
-								<option value="male">Male</option>
+							<select name="gender" >
+							<?php
+								if ($Use->Users_Gender == "male")
+								{
+									?>
+								<option value="male" selected>Male</option>
+								<option value="female" >Female</option>
+								<?php
+								}
+								else
+								{ 
+								?>
+								<option value="male" >Male</option>
 								<option value="female" selected>Female</option>
+								<?php
+								}
+								?>
 							</select>
 							<select name="nationality">
-								<option value="0"></option>
-								<option value="1">American</option>
-								<option value="2">French</option>
+							<?php 
+								$requete = "SELECT Nationality_Fr FROM 	Nationality ORDER BY Nationality_Id asc";
+							
+								$result = $db->query($requete);
+								
+								if (!$result) 
+								{
+									$tableauErreurs = $db->errorInfo();
+									echo $tableauErreur[2]; 
+									die("Erreur dans la requête");
+								}
+								
+								if ($result->rowCount() == 0) {
+								// Pas d'enregistrement
+									die("La table est vide");
+								}
+
+								while ($row = $result->fetch(PDO::FETCH_OBJ)){
+								?>
+									<option value="<?=$row->Nationality_Id?>"><?=$row->Nationality_Fr?></option>
+									
+								<?php }
+								?>
+								
 							</select>
 						</div>
 						<div class="row"><label for="dateofbirth">Date of Birth</label></div>
-						<div class="row"><input type="date" name="dateofbirth" class="left" /></div>
+						<div class="row"><input type="date" name="dateofbirth" class="left" value="<?php echo $Use->Users_Birthdate; ?>"/></div>
 						<div class="row"><label for="streetline">Address Information</label></div>
-						<div class="row"><input name="streetline" placeholder="Street address" class="left" /></div>
-						<div class="row"><input name="streetline2" placeholder="Street address line 2" class="left" /></div>
+						<div class="row"><input name="streetline" placeholder="Street address" class="left" value="<?php echo $Use->Users_Address1; ?>" /></div>
+						<div class="row"><input name="streetline2" placeholder="Street address line 2" class="left" value="<?php echo $Use->Users_Address2; ?>" /></div>
 						<div class="row">
-							<input name="city" placeholder="City" class="left" />
-							<input name="state" placeholder="State/Province" class="left" />
+							<input name="city" placeholder="City" class="left" value="<?php echo $Use->Users_City; ?>"/>
+							<input name="state" placeholder="State/Province" class="left" value="<?php echo $Use->Users_State; ?>"/>
 						</div>
 						<div class="row">
-							<input name="zipcode" placeholder="Postal / Zip Code" class="left" />
+							<input name="zipcode" placeholder="Postal / Zip Code" class="left" value="<?php echo $Use->Users_CP; ?>"/>
 							<select name="county" class="left">
-								<option value="0">Country</option>
-								<option value="1">U.S.A</option>
-								<option value="2">France</option>
+							<?php 
+								$requete = "SELECT Country_fr_fr FROM Country ORDER BY Country_id asc";
+							
+								$result = $db->query($requete);
+								
+								if (!$result) 
+								{
+									$tableauErreurs = $db->errorInfo();
+									echo $tableauErreur[2]; 
+									die("Erreur dans la requête");
+								}
+								
+								if ($result->rowCount() == 0) {
+								// Pas d'enregistrement
+									die("La table est vide");
+								}
+
+								while ($row = $result->fetch(PDO::FETCH_OBJ)){
+								?>
+									<option value="<?=$row->Country_id?>"><?=$row->Country_fr_fr?></option>
+									
+								<?php }
+								?>
+								
 							</select>
 						</div>
 					</div>
@@ -79,12 +152,12 @@
 						<div class="row"><label>My personal ERC 20 compatible Wallet Adress </label></div>
 						<div class="row"><input name="" placeholder="0x73957709695E7.........." class="left" /></div>
 						<div class="row"><label>Phone Number </label></div>
-						<div class="row"><input name="" placeholder="" class="left" /></div>
+						<div class="row"><input name="" placeholder="" class="left" value ="<?php echo $Use->Users_Phone; ?> "/></div>
 						<div class="row"><label>Mail address</label></div>
-						<div class="row"><input name="" placeholder="" class="left" /></div>
+						<div class="row"><input name="" placeholder="" class="left" value ="<?php echo $Use->Users_Mail	; ?> "/></div>
 						<div class="row"><label>Profession </label></div>
-						<div class="row"><input name="" placeholder="" class="left" /></div>
-						<div class="row"><button>EDIT</button></div>
+						<div class="row"><input name="" placeholder="" class="left" value ="<?php echo $Use->Users_Job; ?> "/></div>
+						<div class="row"><button type="submit">EDIT</button></div>
 					</div>
 				</form>
 			</div>
