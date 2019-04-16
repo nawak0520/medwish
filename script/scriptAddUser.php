@@ -16,10 +16,10 @@ $db = connexionBase(); // Appel de la fonction de connexion en base
 
 $requete1 = "SELECT * FROM users WHERE Users_Mail = '$email' or Users_Login = '$Login'";
 
-$result1 = $db->query($requete1);
+$result = $db->query($requete1);
 
 //test si $result est vide avec renvoie d erreur
-if (!$result1) 
+if (!$result) 
 {
     $tableauErreurs = $db->errorInfo();
     echo $tableauErreur[2]; 
@@ -27,21 +27,15 @@ if (!$result1)
 } 
 
 // test si $result possède des lignes
-if ($result1->rowCount() == 0) 
+if ($result->rowCount() == 0) 
 {
-    // ouverture session 
-    session_start();
-    $_SESSION["flag"] = false;
-
-    deconnexionBase($db, $result1);
-    $db = connexionBase();
 
     //req d'insertion dans la Base  
-    $requete3 = "insert into users (Users_Login, Users_Password, Users_Name, Users_Surname, Users_Gender, "." 
+    $requete2 = "insert into users (Users_Login, Users_Password, Users_Name, Users_Surname, Users_Gender, "." 
     Users_Address1, Users_Address2, Users_City, Users_CP, Users_State, Users_Phone, Users_Mail, Users_Job)"." 
     values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"; //req insertion en base
 
-    $stmt = $db->prepare($requete3); //preparation req avec camouflage parametre
+    $stmt = $db->prepare($requete2); //preparation req avec camouflage parametre
 
     $stmt->bindParam(1, $Login);
     $stmt->bindParam(2, $PassWd);
@@ -57,24 +51,35 @@ if ($result1->rowCount() == 0)
     $stmt->bindParam(12, $email);
     $stmt->bindParam(13, $none);
 
+    $stmt->execute(); //execution requete insertion
 
-    $stmt->execute();
+    //var_dump ($db->errorInfo());
 
-    var_dump ($db->errorInfo());
+    // on recup le plus grand Id soit le dernier rentré en base
+    $requete3 = "SELECT Max(Users_Id) as Users_Id from Users";
+    $result = $db->query($requete3);
+    $row = $result->fetch((PDO::FETCH_OBJ));
 
-    deconnexionBase($db, $result3);
+    //on recup les infos du dernier utilisateur pour ouvrir une session
+    $requete4 = "SELECT * FROM users WHERE Users_Id = '$row->Users_Id' ";
+    $result = $db->query($requete4);
+    $row2 = $result->fetch((PDO::FETCH_OBJ));
     
     // ouverture session
     session_start();
-    $_SESSION["login_users"] = $row->Users_Name;
-    $_SESSION["pwd_users"] = $PassWd;
-    $_SESSION["email_users"] = $email;
-    $_SESSION["id_users"] = $row->Users_Id;
-    $_SESSION["flag"] = true;
+    $_SESSION["login_users"] = $row2->Users_Login;      //echo($_SESSION["login_users"]);echo("<br>");
+    $_SESSION["pwd_users"] = $PassWd;                   //echo($_SESSION["pwd_users"]);echo("<br>");
+    $_SESSION["email_users"] = $email;                  //echo($_SESSION["email_users"]);echo("<br>");
+    $_SESSION["id_users"] = $row2->Users_Id;            //echo($_SESSION["id_users"]);echo("<br>");
+    $_SESSION["flag"] = true;                           //echo($_SESSION["flag"]);echo("<br>");
 
+    deconnexionBase($db, $result);
     header("Location:../fr/login.html");         
 }
 else 
 {
     echo '<body onLoad="alert(\'Membre existant... entrez nouveau login ou email\'); window.location=\'../fr/signup.html\';">';
+    // ouverture session 
+    session_start();
+    $_SESSION["flag"] = false;
 }
