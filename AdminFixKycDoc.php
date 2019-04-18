@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="styleAdminFixKyc.css">
+    <link rel="stylesheet" type="text/css" href="style/styleAdminFixKyc.css">
     <title>Document</title>
 </head>
 <body>
@@ -37,13 +37,12 @@
             <thead>
             <tr>
             <th scope="col" class ="titreCentre">Evi_Document</th>
-            <th scope="col" class ="titreCentre">Evi_Id</th>
-            <th scope="col" class ="titreCentre">Evi_Document</th>
-            <th scope="col" class ="titreCentre">Evi_numDoc</th>
             <th scope="col" class ="titreCentre">Evi_Selfie</th>
+            <th scope="col" class ="titreCentre">Evi_Id</th>
+            <th scope="col" class ="titreCentre">Evi_Type</th>
+            <th scope="col" class ="titreCentre">Evi_numDoc</th>
             <th scope="col" class ="titreCentre">Evi_Conf</th>
             <th scope="col" class ="titreCentre">Evi_Users_Id</th>
-            <th scope="col" class ="titreCentre">Evi_Soc_Id</th>
             </tr>
             </thead>
             <?php
@@ -52,16 +51,14 @@
             while ($row = $result->fetch(PDO::FETCH_OBJ))
             {   
                 echo"<tr>";?>
-                <td><img src="jarditou_photos/<?php echo $row->pro_id.'.'.$row->pro_photo;?>" class = "img-fluid" alt="Responsive image"></td><?php
+                <td><img src="proof/proofIdentity/<?php echo $row->Evi_Users_Id.'.'.$row->Evi_Document;?>" class = "img-fluid" alt="Responsive image"></td>
+                <td><img src="proof/proofSelfi/<?php echo $row->Evi_Users_Id.'.'.$row->Evi_Selfie;?>" class = "img-fluid" alt="Responsive image"></td>
+                <?php
                 echo"<td>".$row->Evi_Id."</td>";
                 echo"<td>".$row->Evi_Type."</td>";
-                //echo"<td><a href=\"detailProduit.php?pro_id=".$row->pro_id."\" title=".$row->pro_libelle.">".$row->pro_libelle."</a></td>";
                 echo"<td>".$row->Evi_numDoc."</td>";
-                echo"<td>".$row->pro_stock."</td>";
-                echo"<td>".$row->pro_couleur."</td>";
-                echo"<td>".$row->pro_d_ajout."</td>";
-                echo"<td>".$row->pro_d_modif."</td>";
-                echo"<td>".$row->pro_bloque."</td>";
+                echo"<td>".$row->Evi_Conf."</td>";
+                echo"<td>".$row->Evi_Users_Id."</td>";
                 echo"</tr>";
             }
             
