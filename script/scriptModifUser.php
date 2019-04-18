@@ -1,23 +1,23 @@
 <?php
-
+session_start();
 $none = "";
 
 if(isset($_POST['EDIT'])) { 
 
-    $firstname = $_POST['firstname']; echo($firstname);echo("<br>");
-    $lastname = $_POST['lastname'];echo($lastname);echo("<br>");
-    $gender = $_POST['gender'];echo($gender);echo("<br>");
-    $nationality = $_POST['nationality'];echo($nationality);echo("<br>");
-    $dateofbirth = $_POST['dateofbirth'];echo($dateofbirth);echo("<br>");
-    $streetline = $_POST['streetline'];echo($streetline);echo("<br>");
-    $streetline2 = $_POST['streetline2'];echo($streetline2);echo("<br>");
-    $city = $_POST['city'];echo($city);echo("<br>");
-    $state = $_POST['state'];echo($state);echo("<br>");
-    $zipcode = $_POST['zipcode'];echo($zipcode);echo("<br>");
-    $county = $_POST['county'];echo($county);echo("<br>");
-    $phone = $_POST['phone'];echo($phone);echo("<br>");
-    $eMail = $_POST['eMail'];echo($eMail);echo("<br>");
-    $job = $_POST['job'];echo($job);echo("<br>");
+    $firstname = $_POST['firstname'];       //echo($firstname);echo("<br>");
+    $lastname = $_POST['lastname'];         //echo($lastname);echo("<br>");
+    $gender = $_POST['gender'];             //echo($gender);echo("<br>");
+    $nationality = $_POST['nationality'];   //echo($nationality);echo("<br>");
+    $dateofbirth = $_POST['dateofbirth'];   //echo($dateofbirth);echo("<br>");
+    $streetline = $_POST['streetline'];     //echo($streetline);echo("<br>");
+    $streetline2 = $_POST['streetline2'];   //echo($streetline2);echo("<br>");
+    $city = $_POST['city'];                 //echo($city);echo("<br>");
+    $state = $_POST['state'];               //echo($state);echo("<br>");
+    $zipcode = $_POST['zipcode'];           //echo($zipcode);echo("<br>");
+    $county = $_POST['county'];             //echo($county);echo("<br>");
+    $phone = $_POST['phone'];               //echo($phone);echo("<br>");
+    $eMail = $_POST['eMail'];               //echo($eMail);echo("<br>");
+    $job = $_POST['job'];                   //echo($job);echo("<br>");
 }
 else{
     echo '<body onLoad="alert(\'Erreur dans vos modifications... Recommencez\'); window.location=\'../user/profil.php\';">';
@@ -26,7 +26,7 @@ else{
 require "scriptConnexionBase.php"; // Inclusion de notre bibliothèque de fonctions
 $db = connexionBase(); // Appel de la fonction de connexion en base
 
-session_start();
+
 
 $requete = "update Users set 
 Users_Name = ?,

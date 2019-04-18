@@ -9,6 +9,7 @@ if(isset($_POST['REGISTER'])) {
 }
 else{
     echo '<body onLoad="alert(\'Erreur dans le Register... Recommencez\'); window.location=\'../fr/signup.html\';">';
+    exit;
 }
 
 require "scriptConnexionBase.php"; // Inclusion de notre bibliothèque de fonctions

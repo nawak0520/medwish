@@ -31,5 +31,14 @@ function deconnexionBase($db, $result)
     $result = null;
 }
 
+function decoResult($result)
+{
+    $result = null;
+}
+
+function decoBase($db)
+{
+    $db = null;
+}
 
 ?>

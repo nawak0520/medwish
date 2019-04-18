@@ -12,7 +12,7 @@
 		<nav>
 			<img src="../images/logo.svg" />
 			<a href="./dashboard.html"> <img src="../images/user/dashboard-inactive.svg" /> Dashboard </a>
-			<a href="./profil.html"> <img src="../images/user/profil-inactive.svg" /> Profil </a>
+			<a href="./profil.php"> <img src="../images/user/profil-inactive.svg" /> Profil </a>
 			<a href="./purchase-history.html">
 				<img src="../images/user/purchase-history-inactive.svg" />Purchase history
 			</a>
@@ -21,7 +21,7 @@
 				<img src="../images/user/kyc-documents.svg" />KYC Documents
 			</a>
 			<a href="./my-bounty.html"> <img src="../images/user/bounty-inactive.svg" />My Bounty</a>
-			<a href="./disable-2fa.html"> <img src="../images/user/2fa-disable.svg"/></a>
+			<!-- <a href="./disable-2fa.html"> <img src="../images/user/2fa-disable.svg"/></a> -->
 		</nav>
 		<header>
 			<p>Welcome back &lt;USERNAME&gt; and thank you for believing in Medwish</p>
@@ -33,25 +33,51 @@
 		<div class="content">
 			<div class="panel kyc">
 				<h2>Personal KYC Documents</h2>
-				<div class="row">
-					<div class="input">Proof of residential address <input type="file" /> </div>
-					<div class="separator"></div>
-					<div class="separator"></div>
-				</div>
-				<div class="row end">
-					<div class="input">Passport <input type="file" /> </div>
-					<div class="column"><label>ID Number</label> <input /></div>
-					<div class="input">Selfie Passport <input type="file" /> </div>
-				</div>
-				<div class="row">
-					<select>
-						<option>Crypto-tradings</option>
-					</select>
-					<div class="separator"></div>
-					<button>EDIT</button>
-				</div>
+
+				<form class="row" method="POST" action="../script/scriptKyc.php" enctype="multipart/form-data"> 
+
+					<div class="column">
+						<div class="row"><label for="typeDoc">Type de document envoyé</label></div>
+						<div class="row">
+							<select name="typeDoc">
+								<option selected="selected">PassePort</option>
+								<option>Carte nationale d'identité</option>
+								<option>Permis de conduire</option>
+								<option>Visa Immigrant - Carte Verte</option>
+							</select>
+						</div>	
+					
+						<div class="row"><label >télécharger le fichier (format accepté : -jpeg, -png)</label></div>
+							<div class="row">
+							<input type="file" name="proof[]"  id="proofId" required>
+						</div>
+
+						<div class="separator"></div>
+						<div class="separator"></div> 
+					
+						<div class="row"><label>Numero d'identification du document</label></div>
+						<div class="row">
+							<input type="text" name="numId" id="numId" required/>
+						</div>
+
+						<div class="row"><label>Selfie de votre document (format accepté : -jpeg, -png)</label></div>
+						<div class="row">
+							<input type="file" name="proof[]"  id="selfiProofId" required/>
+						</div>
+						<div class="separator"></div><br>
+						<div class="row">
+							<select>
+								<option>Crypto-tradings</option>
+							</select>
+						</div>
+
+						<div class="separator"></div>
+						<button type="submit" value ="confirmer" name="confirmer" id = "confirmer">Confirmer</button>
+					</div>
+				</form>	
 			</div>
 		</div>
+			
 		<footer>
 			<div class="documents">
 				<button class="inset">Whitepaper</button> <button class="inset">One Page</button>

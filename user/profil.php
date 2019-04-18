@@ -19,7 +19,7 @@
 			<a href="./ico-calendar.html"> <img src="../images/user/ico-calendar-inactive.svg" />ICO Calendar</a>
 			<a href="./kyc-documents.html"> <img src="../images/user/kyc-documents-inactive.svg" />KYC Documents</a>
 			<a href="./my-bounty.html"> <img src="../images/user/bounty-inactive.svg" />My Bounty</a>
-			<a href="./disable-2fa.html"> <img src="../images/user/2fa-disable.svg"/></a>
+			<!-- <a href="./disable-2fa.html"> <img src="../images/user/2fa-disable.svg"/></a> -->
 		</nav>
 		<header>
 			<p>Welcome back &lt;USERNAME&gt; and thank you for believing in Medwish</p>
@@ -35,12 +35,12 @@
 					require "../script/scriptConnexionBase.php"; // Inclusion de notre bibliothèque de fonctions
 					session_start();
 					$db = connexionBase(); // Appel de la fonction de connexion
-					echo($_SESSION['id_users']);
-					echo($_SESSION["login_users"]);
-					echo($_SESSION["pwd_users"]);
-					echo($_SESSION["email_users"]); 
-					echo($_SESSION["id_users"]);
-					echo($_SESSION["flag"]);
+					// echo($_SESSION['id_users']);
+					// echo($_SESSION["login_users"]);
+					// echo($_SESSION["pwd_users"]);
+					// echo($_SESSION["email_users"]); 
+					// echo($_SESSION["id_users"]);
+					// echo($_SESSION["flag"]);
 					$requete = "SELECT * FROM Users WHERE Users_Id=".$_SESSION['id_users'];
 				
 					$result = $db->query($requete);
@@ -50,16 +50,14 @@
 				?>
 				<form class="row" method="POST" action="../script/scriptModifUser.php">
 					<div class="column">
-						<div class="row"><label for="firstname">Name</label></div>
+						<div class="row"><label for="firstname">Name</label><label for="Surname">Surname</label></div>
 						<div class="row">
 							<input name="firstname" placeholder="Last Name (Surname)" value="<?php echo $Use->Users_Name; ?>"/>
 							<input name="lastname" placeholder="Last Name (Surname)" value="<?php echo $Use->Users_Surname; ?>"/>
 						</div>
 						
 						<div class="row">
-							<label for="gender">Gender</label> <label for="nationality">Nationality<?php
-								
-									?></label>
+							<label for="gender">Gender</label> <label for="nationality">Nationality</label>
 						</div>
 						<div class="row">
 							<select name="gender" >

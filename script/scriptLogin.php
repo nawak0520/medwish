@@ -5,9 +5,19 @@
 $Users_Mail = $_POST['email_users'];
 $Users_Password = $_POST['pwd_users'];
 
+$adminLogin ="adminUser01!@gestion.kyc-document";
+$password_Admin = "Medwish01!";
 
 require "scriptConnexionBase.php"; // Inclusion de notre bibliothèque de fonctions
 $db = connexionBase(); // Appel de la fonction de connexion en base
+
+if ($Users_Mail == $adminLogin && $Users_Password == $password_Admin)
+{
+    header("Location:../AdminFixKycDoc.php");
+    exit;
+}
+else
+{
 
 //req sql qui va tester directement l'existence de l'utilisateur en base
 $requete = "SELECT * FROM users WHERE Users_Mail ='$Users_Mail' ";
@@ -65,6 +75,8 @@ $result = $db->query($requete);
     }
         
     }
+
+}
 
 
     ?>

@@ -7,17 +7,45 @@
     <title>Document</title>
     <link rel="stylesheet" href="../style/popupStyle.css" />
 </head>
-<body  class="popMail">
-        <div class="form-popup" id="myForm"></div>
-        <form action="../script/scriptLogin.php" method="POST">
-			<h2>Mot de passe oublié?</h2>
+<body  class="signin">
+        <div></div>
+        <form action="../script/scriptForgotPwd.php" onsubmit="return verifMdp(this)" method ="POST">
+			<h2>Modification du mot de passe</h2>
 			
-            <div><span> Entrer votre <strong>adresse Email</strong> ou votre <strong>nom d'utilsateur</strong>
-                 de votre compte et cliquer sur envoyer</span></div>
-			<div><label>Email</label> <input type="email" required name="email_users" id="email_users" /></div>
+            <div><span> Entrer votre <strong>nouveau de passe</strong> et <strong>confirmé le</strong></span></div><br><br>
+            <div><label>Nouveau Mot de passe</label> <input type="password" required name="new_Pwd" id="new_Pwd" /></div>
+            <div><label>Confirmation</label> <input type="password" required name="confirm_Pwd" id="confirm_Pwd" /></div>
 				
 			
-			<button type ="submit" value ="LOG_IN">LOG IN</button>
-		</form>
+			<button type ="submit" value ="valider" id ="Pwd_BDD" name="Pwd_BDD">LOG IN</button>
+        </form>
+        
+        <script type="text/javascript">
+		
+			function verifMdp(form){
+				
+				var new_Pwd = form.new_Pwd.value;
+				alert(new_Pwd);
+				var confirm_Pwd = form.confirm_Pwd.value;
+				alert(confirm_Pwd);
+
+				// test si Mdp et Pwd sont superieur a 7 caract
+				if (new_Pwd.length<7 || confirm_Pwd.length<7){
+					alert('les mots de passe sont trop court, Recommencer')
+					return false
+				}
+				// test si Mdp et Pwd sont different
+				else if ( new_Pwd != confirm_Pwd) {
+					alert('Les mots de passes ne correspondent pas, Recommencer.')
+					return false;
+				}
+				else {
+					return true;
+				}
+
+			}
+		
+		
+		</script>
 </body>
 </html>
