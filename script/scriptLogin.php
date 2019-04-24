@@ -13,6 +13,12 @@ $db = connexionBase(); // Appel de la fonction de connexion en base
 
 if ($Users_Mail == $adminLogin && $Users_Password == $password_Admin)
 {
+    session_start();
+    $_SESSION["login_users"] = "Admin_Medwish";
+    $_SESSION["pwd_users"] = $Users_Password;
+    $_SESSION["email_users"] = $Users_Mail;
+    $_SESSION["id_users"] = "bigbro10";
+    $_SESSION["flag"] = true;
     header("Location:../AdminFixKycDoc.php");
     exit;
 }

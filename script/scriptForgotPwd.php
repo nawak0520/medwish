@@ -1,6 +1,7 @@
 <?php 
 
-require "scriptConnexionBase.php"; // Inclusion de notre bibliothèque de fonctions
+require "scriptConnexionBase.php";
+require "FonctionCrudLib.php"; // Inclusion de notre bibliothèque de fonctions
 $db = connexionBase(); // Appel de la fonction de connexion en base
 session_start();
 
@@ -50,68 +51,73 @@ if(isset($_POST['envoiMailBis'])) {
 
 
 $mail = $_SESSION["email_users"]; // Déclaration de l'adresse de destination.
+$sujetEnvoi = "Hey mon ami !"; //sujet du mail a envoyer
+$messageEnvoi = "Veuillez-cliquez sur le lien ci-dessous pour modifier votre mot de passe
+<a href=\"http://localhost/web/medwish/fr/forgot.html?Users_id=".$_SESSION["pwd_users"]."\">Mon nouveau mot de passe</a>";
 
 //recuperation du type de mail par rapport au serveur (problème des passage de ligne source OpenClassrooms)
 
-if (!preg_match("#^[a-z0-9._-]+@(hotmail|live|msn|outlook|gmail).[a-z]{2,4}$#", $mail))
-{
-	$passage_ligne = "\r\n";
-}
-else
-{
-	$passage_ligne = "\n";
-}
+superMail($messageEnvoi, $sujetEnvoi, $mail);
 
-//=====Déclaration des messages au format texte et au format HTML.
-$message_txt = "Salut à tous, voici un e-mail envoyé par un script PHP.";
-$message_html = "<html>
-					<head></head>
-					<body>
-					<b>Bonjour</b><br>
-					Veuillez-cliquez sur le lien ci-dessous pour modifier votre mot de passe
-					<a href=\"http://localhost/web/medwish/fr/forgot.html?Users_id=".$_SESSION["pwd_users"]."\">Mon nouveau mot de passe</a>
-					</body>
-					</html>";
-//==========
-//_SESSION["pwd_users"].
-//==========
+// if (!preg_match("#^[a-z0-9._-]+@(hotmail|live|msn|outlook|gmail).[a-z]{2,4}$#", $mail))
+// {
+// 	$passage_ligne = "\r\n";
+// }
+// else
+// {
+// 	$passage_ligne = "\n";
+// }
 
-//=====Création de la boundary
-$boundary = "-----=".md5(rand());
-//==========
+// //=====Déclaration des messages au format texte et au format HTML.
+// $message_txt = "Salut à tous, voici un e-mail envoyé par un script PHP.";
+// $message_html = "<html>
+// 					<head></head>
+// 					<body>
+// 					<b>Bonjour</b><br>
+// 					Veuillez-cliquez sur le lien ci-dessous pour modifier votre mot de passe
+// 					<a href=\"http://localhost/web/medwish/fr/forgot.html?Users_id=".$_SESSION["pwd_users"]."\">Mon nouveau mot de passe</a>
+// 					</body>
+// 					</html>";
+// //==========
+// //_SESSION["pwd_users"].
+// //==========
+
+// //=====Création de la boundary
+// $boundary = "-----=".md5(rand());
+// //==========
  
-//=====Définition du sujet.
-$sujet = "Hey mon ami !";
-//=========
+// //=====Définition du sujet.
+// $sujet = "Hey mon ami !";
+// //=========
 
-$header = "From: \"blockchaintiti@gmail.com\"<blockchaintiti@gmail.com>".$passage_ligne;
-$header.= "Reply-to: \"blockchaintiti@gmail.com\" <blockchaintiti@gmail.com>".$passage_ligne; 
-$header.= "MIME-Version: 1.0".$passage_ligne; 
-$header.= "Content-Type: multipart/alternative;".$passage_ligne." boundary=\"$boundary\"".$passage_ligne;
+// $header = "From: \"blockchaintiti@gmail.com\"<blockchaintiti@gmail.com>".$passage_ligne;
+// $header.= "Reply-to: \"blockchaintiti@gmail.com\" <blockchaintiti@gmail.com>".$passage_ligne; 
+// $header.= "MIME-Version: 1.0".$passage_ligne; 
+// $header.= "Content-Type: multipart/alternative;".$passage_ligne." boundary=\"$boundary\"".$passage_ligne;
 
-//=====Création du message.
-$message = $passage_ligne."--".$boundary.$passage_ligne;
+// //=====Création du message.
+// $message = $passage_ligne."--".$boundary.$passage_ligne;
 
-$message = "...";
-$message .= "Content-Type: text/html; charset=\"ISO-8859-1\"".$passage_ligne;
-$message .= "Content-Transfer-Encoding: 8bit".$passage_ligne;
-$message .= $passage_ligne.$message_txt.$passage_ligne;
-//==========
-$message.= $passage_ligne."--".$boundary.$passage_ligne;
-//=====Ajout du message au format HTML
-$message.= "Content-Type: text/html; charset=\"ISO-8859-1\"".$passage_ligne;
-$message.= "Content-Transfer-Encoding: 8bit".$passage_ligne;
-$message.= $passage_ligne.$message_html.$passage_ligne;
-//==========
-$message.= $passage_ligne."--".$boundary."--".$passage_ligne;
-$message.= $passage_ligne."--".$boundary."--".$passage_ligne;
-//==========
-//echo($message);
-//=====Envoi de l'e-mail.
-mail($mail,$sujet,$message,$header);
-echo '<body onLoad="alert(\'verifier votre boite mail!\'); window.location=\'../fr/login.html\';">';
-}
-//==========
+// $message = "...";
+// $message .= "Content-Type: text/html; charset=\"ISO-8859-1\"".$passage_ligne;
+// $message .= "Content-Transfer-Encoding: 8bit".$passage_ligne;
+// $message .= $passage_ligne.$message_txt.$passage_ligne;
+// //==========
+// $message.= $passage_ligne."--".$boundary.$passage_ligne;
+// //=====Ajout du message au format HTML
+// $message.= "Content-Type: text/html; charset=\"ISO-8859-1\"".$passage_ligne;
+// $message.= "Content-Transfer-Encoding: 8bit".$passage_ligne;
+// $message.= $passage_ligne.$message_html.$passage_ligne;
+// //==========
+// $message.= $passage_ligne."--".$boundary."--".$passage_ligne;
+// $message.= $passage_ligne."--".$boundary."--".$passage_ligne;
+// //==========
+// //echo($message);
+// //=====Envoi de l'e-mail.
+// mail($mail,$sujet,$message,$header);
+// echo '<body onLoad="alert(\'verifier votre boite mail!\'); window.location=\'../fr/login.html\';">';
+ }
+// //==========
 
 if (isset($_POST['Pwd_BDD'])){
 
