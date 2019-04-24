@@ -66,8 +66,8 @@
             while ($row = $result->fetch(PDO::FETCH_OBJ))
             {   
                 echo"<tr>";?>
-                <td><img src="proof/proofIdentity/<?php echo $row->Evi_Users_Id.'.'.$row->Evi_Document;?>" class = "img-fluid" alt="Responsive image"></td>
-                <td><img src="proof/proofSelfi/<?php echo $row->Evi_Users_Id.'.'.$row->Evi_Selfie;?>" class = "img-fluid" alt="Responsive image"></td>
+                <td><img src="proof/proofIdentity/<?php echo $row->Evi_Users_Id.'.'.$row->Evi_Document;?>" id="<?php echo $row->Evi_Users_Id.'.'.$row->Evi_Document;?>" onclick="javascript:openModalImg(this.id)" class = "img-fluid" alt="Responsive image"></td>
+                <td><img src="proof/proofSelfi/<?php echo $row->Evi_Users_Id.'.'.$row->Evi_Selfie;?>" id="<?php echo $row->Evi_Users_Id.'.'.$row->Evi_Selfie;?>" onclick="javascript:openModalImg(this.id)" class ="img-fluid" alt="Responsive image"></td>
                 <?php
                 echo"<td>".$row->Evi_Id."</td>";
                 echo"<td>".$row->Evi_Type."</td>";
@@ -86,11 +86,54 @@
             echo "</table>"; 
             ?>
             <input class="btn btn-primary" type="reset" onclick="window.location.reload()" value="Refresh"> 
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+            <!-- The Close Button -->
+            <span class="close" onclick="javascript:closeModalImg()">&times;</span>
+
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="img01">
+
+        </div>
+
             </form>
             <br>
             <br>
             
             <script type="text/javascript">
+            // Get the modal
+            //var modal = document.getElementById('myModal');
+
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            //var img = document.getElementById('myImg');
+            //var modalImg = document.getElementById("img01");
+            //var captionText = document.getElementById("caption");
+            //img.onclick = function(){
+            //modal.style.display = "block";
+            //modalImg.src = this.src;
+            //captionText.innerHTML = this.alt;
+            //}
+            
+            
+
+                function openModalImg(idImg){
+                    var modal = document.getElementById('myModal');
+                    var img = document.getElementById('idImg'); 
+                    console.log(img);   
+                    var modalImg = document.getElementById("img01");
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                }
+
+                function closeModalImg(idImg){
+                    var modal = document.getElementById('myModal');
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+                    modal.style.display = "none";
+                    
+                }
 
                 function ConfirmMessage(form) {
 

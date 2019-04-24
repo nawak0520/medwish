@@ -5,7 +5,9 @@ function connexionBase()
     $host = "localhost";
     $login= "root";      
     $password="1234";    
-    $base = "medwish";    
+    $base = "medwish";  
+    
+    
  
     try // tentative connexion a BDD
     {
