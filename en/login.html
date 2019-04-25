@@ -1,17 +1,28 @@
 <html>
 	<head>
 		<title>Log in - Medwish</title>
-		<link rel="stylesheet" href="../style/modal.css" />
+		<link rel="stylesheet" href="../style/popupStyle.css" />
 	</head>
 	<body class="signin">
-		<form action="./user/dashboard.html" method="POST">
-			<h2>Log in</h2>
+
+		<form action="script_En/scriptLogin.php" method="POST">
+			<h2>Log in </h2>
 			<img src="../images/padlock.svg" />
 			<hr />
-			<div><label>Email</label> <input type="email" required /></div>
-			<div><label>Password</label> <input type="password" required /></div>
-			<a href="../forgot.html" class="forgot">FORGOT PASSWORD?</a> <button>LOG IN</button>
-			<div class="bottom-text">Not on Medwish yet? <a href="../signup.html">REGISTER</a></div>
+
+			<div>
+				<label>Email</label> 
+				<input type="email" required name="email_users" id="email_users"  />
+			</div>
+			<div>
+				<label>Password</label> 
+				<input type="password" name="pwd_users" id="pwd_users" required />
+			</div>
+			<div>
+				<a class="forgot" onclick="javascript:openForm()" id ="btnModalEmail">Forgotten password?</a>
+			</div>
+			<button type ="submit" value ="LOG_IN" id = "LOG_IN">LOG IN</button>
+			<div class="bottom-text">Not on Medwish yet? <a href="signup.html">REGISTER</a></div>
 		</form>
 		<div class="separator">
 			<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
@@ -26,5 +37,37 @@
 				your needs in a simple, easy and intuotive way
 			</p>
 		</div>
+		<!-- Le Modal forgotPwd -->
+		<div id="forgotPwd" class="modal">
+
+			<!-- Contenu Modal  -->
+			<div class="modal-content">
+				<span class="close" onclick="javascript:closeForm()" >&times;</span>
+				<form action="script_En/scriptForgotPwd.php" class="form" method="POST">
+					
+					<h2>Forgot Password ?</h2>
+					
+					<div><span> Enter your account<strong> email address </strong>and click on send</span></div><br>
+					<div><label>Email</label> <input type="email" name="recupMail" id="recupMail" required/></div>
+					
+					<button type ="submit" value ="Valider" id ="envoiMailBis" name="envoiMailBis" >Validate</button>
+				</form>		
+			</div>
+		</div>
+		<script type="text/javascript">
+				
+			function openForm() {
+				var modal = document.getElementById('forgotPwd');
+				var btn = document.getElementById("btnModalEmail");
+				modal.style.display = "block"; 
+			}
+			
+			function closeForm() {		
+				var modal = document.getElementById('forgotPwd'); 
+				var span = document.getElementsByClassName("close")[0]; 
+				modal.style.display = "none"; 
+			}
+
+		</script>
 	</body>
 </html>

@@ -20,10 +20,10 @@ if(isset($_POST['EDIT'])) {
     $job = $_POST['job'];                   //echo($job);echo("<br>");
 }
 else{
-    echo '<body onLoad="alert(\'Erreur dans vos modifications... Recommencez\'); window.location=\'../user/profil.php\';">';
+    echo '<body onLoad="alert(\'Erreur dans vos modifications... Recommencez\'); window.location=\'../user_Fr/profil.php\';">';
 }
 
-require "scriptConnexionBase.php"; // Inclusion de notre bibliothèque de fonctions
+require "../../script/scriptConnexionBase.php"; // Inclusion de notre bibliothèque de fonctions
 $db = connexionBase(); // Appel de la fonction de connexion en base
 
 
@@ -44,8 +44,6 @@ Users_Job =?,
 Users_Country_id =?,
 Users_Nationality_Id =?    where Users_Id = ?";
     
-// :pro_cat_id, :pro_ref, :pro_libelle, :pro_description, :pro_prix, :pro_stock, :pro_couleur, :jpg, :pro_d_ajout
-
     $stmt = $db->prepare($requete);
 
     $stmt->bindParam(1, $_POST['firstname']);
@@ -66,10 +64,8 @@ Users_Nationality_Id =?    where Users_Id = ?";
 
     $stmt->execute();
     var_dump ($db->errorInfo());
-    
-
     deconnexionBase($db, $result);
             
-    header("Location:../user/dashboard.html");
+    header("Location:../user_Fr/dashboard.php");
     
 

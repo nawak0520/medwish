@@ -8,7 +8,7 @@ $Users_Password = $_POST['pwd_users'];
 $adminLogin ="adminUser01!@gestion.kyc-document";
 $password_Admin = "Medwish01!";
 
-require "scriptConnexionBase.php"; // Inclusion de notre bibliothèque de fonctions
+require "../../script/scriptConnexionBase.php"; // Inclusion de notre bibliothèque de fonctions
 $db = connexionBase(); // Appel de la fonction de connexion en base
 
 if ($Users_Mail == $adminLogin && $Users_Password == $password_Admin)
@@ -19,7 +19,7 @@ if ($Users_Mail == $adminLogin && $Users_Password == $password_Admin)
     $_SESSION["email_users"] = $Users_Mail;
     $_SESSION["id_users"] = "bigbro10";
     $_SESSION["flag"] = true;
-    header("Location:../AdminFixKycDoc.php");
+    header("Location:../../AdminFixKycDoc.php");
     exit;
 }
 else
@@ -44,13 +44,14 @@ $result = $db->query($requete);
     if ($result->rowCount() == 0) 
     {
         // ouverture session 
+        session_destroy();
         session_start();
+        $_SESSION["id_users"] = null;
         $_SESSION["flag"] = false;
 
         deconnexionBase($db, $result);
-
         // affiche le message d'alerte + redirection sur la page login.html
-        echo '<body onLoad="alert(\'Membre non reconnu...Réessayer\'); window.location=\'../fr/login.html\';">';           
+        echo '<body onLoad="alert(\'Unrecognized member...Try again\'); window.location=\'../login.html\';">';           
     }
     else if ($result->rowCount() > 0) 
     {   
@@ -62,7 +63,7 @@ $result = $db->query($requete);
         {
             // ouverture session
             session_start();
-            $_SESSION["login_users"] = $row->Users_Name;
+            $_SESSION["login_users"] = $row->Users_Login;
             $_SESSION["pwd_users"] = $Users_Password;
             $_SESSION["email_users"] = $Users_Mail;
             $_SESSION["id_users"] = $row->Users_Id;
@@ -71,13 +72,20 @@ $result = $db->query($requete);
             //fermeture connexion base
             deconnexionBase($db, $result);
             
-            header("Location:../user/dashboard.html");
+            header("Location:../user_En/dashboard.php");
             exit; 
         }
         
 
         else {
-        echo '<body onLoad="alert(\'Membre non reconnu...Réessayer\'); window.location=\'../fr/login.html\';">';           
+        session_destroy();
+        session_start();
+        $_SESSION["id_users"] = null;
+        $_SESSION["flag"] = false;
+
+        deconnexionBase($db, $result);
+
+        echo '<body onLoad="alert(\'Unrecognized member...Try again!\'); window.location=\'../login.html\';">';  
     }
         
     }

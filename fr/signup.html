@@ -5,20 +5,32 @@
 	</head>
 	
 	<body class="signup">
-		<form action="../script/scriptAddUser.php" onsubmit="return verifMdp(this)" method ="POST">
+		<form action="script_Fr/scriptAddUser.php" onsubmit="return verifMdp(this)" method ="POST">
 			<h2>S'INSCRIRE</h2>
 			<!-- <div class="company">
 				<input type="checkbox" />
 				<span> Cochez ici si vous agissez pour le compte d'une societe, pour un fond d'investissement, une association...</span>
 			</div> -->
-			<div><label>Login</label> <input type="text" placeholder="Login" name="login" id="login" required /></div>
-			<div><label>Email</label> <input type="email" placeholder="fournir une adresse active" name ="eMail" id="eMail" required /></div>
-			<div><label>Mot de passe</label> <input type="password" placeholder="Minimum 7 characters" name ="Mdp" id="Mdp" required /></div>
 			<div>
-				<label>Confirmer le Mot de passe</label> <input type="password" placeholder="Passwords must match" name ="Pwd" id="Pwd" required />
+				<label>Login</label> 
+				<input type="text" placeholder="Login" name="login" id="login" required />
 			</div>
-			<div><input type="checkbox" required /> J'accepte les conditions g&eacute;n&eacute;rales <a>Termes & Conditions</a></div>
-			<button  type ="submit" value ="REGISTER" name="REGISTER" id = "REGISTER">REGISTER</button>
+			<div>
+				<label>Email</label> 
+				<input type="email" placeholder="fournir une adresse active" name ="eMail" id="eMail" required />
+			</div>
+			<div>
+				<label>Mot de passe</label> 
+				<input type="password" placeholder="Minimum 7 characters" name ="Mdp" id="Mdp" required />
+			</div>
+			<div>
+				<label>Confirmer le Mot de passe</label>
+				<input type="password" placeholder="Passwords must match" name ="Pwd" id="Pwd" required />
+			</div>
+			<div>
+				<input type="checkbox" required /> J'accepte les conditions g&eacute;n&eacute;rales <a>Termes & Conditions</a>
+			</div>
+			<button  type ="submit" value ="REGISTER" name="REGISTER" id = "REGISTER">S'INSCRIRE</button>
 			<div class="bottom-text">d&eacute;j&agrave; un compte ? <a href="login.html">LOG IN</a></div>
 		</form>
 		<div class="separator">
@@ -38,7 +50,7 @@
 		
 			function verifMdp(form){
 				
-				var Mdp = form.Mdp.value;
+				var Mdp = form.Mdp.value; //on recup les valeur Mdp et Pwd du form puis on les testes
 				alert(Mdp);
 				var Pwd = form.Pwd.value;
 				alert(Pwd);
@@ -56,10 +68,7 @@
 				else {
 					return true;
 				}
-
 			}
-		
-		
 		</script>
 	</body>
 </html>

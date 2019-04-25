@@ -2,7 +2,7 @@
 
 session_start();
 
-if ($_SESSION['id_users'] == "bigbro10"){ //si une session est bien ouverte on autorise la gstion des evidences
+if ($_SESSION['id_users'] == "bigbro10"){ //si une session est bien ouverte on autorise la gestion des evidences
 
 ?>
 

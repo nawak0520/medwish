@@ -5,16 +5,22 @@
 	</head>
 	<body class="signin">
 			
-		<form action="../script/scriptLogin.php" method="POST">
+		<form action="script_Fr/scriptLogin.php" method="POST">
 			<h2>Log in </h2>
 			<img src="../images/padlock.svg" />
 			<hr />
 			
-			<div><label>Email</label> <input type="email" required name="email_users" id="email_users" /></div>
-			<div><label>Mot de passe</label> <input type="password" name="pwd_users" id="pwd_users" required /></div>
 			<div>
-			<a class="forgot" onclick="javascript:openForm()" id ="btnModalEmail">Mot de passe oubli&eacute;?</a>
-		</div>
+				<label>Email</label>
+				<input type="email" required name="email_users" id="email_users" />
+			</div>
+			<div>
+				<label>Mot de passe</label>
+				<input type="password" name="pwd_users" id="pwd_users" required />
+			</div>
+			<div>
+				<a class="forgot" onclick="javascript:openForm()" id ="btnModalEmail">Mot de passe oubli&eacute;?</a>
+			</div>
 			<button type ="submit" value ="LOG_IN" id = "LOG_IN">LOG IN</button>
 			<div class="bottom-text">Pas de compte Medwish?<a href="signup.html">S'INSCRIRE</a></div>
 		</form>
@@ -25,49 +31,46 @@
 		</div>
 		<div class="details">
 			<img src="../images/logo.svg" />
-			<h1>Welcome back</h1>
+			<h1>Bon Retour</h1>
 			<p>
-				Wether you are an expert or a beginner. Bit is going to become the first platform which will faster all
-				your needs in a simple, easy and intuotive way
+				Que vous soyez un expert ou un d&eacute;butant. Bit va devenir la premi&egrave;re plate-forme qui acc&eacute;l&eacute;rera tous les processus de
+				vos besoins de mani&egrave;re simple, facile et intuitive
 			</p>
 		</div>
-			<!-- Le Modal forgotPwd -->
-			<div id="forgotPwd" class="modal">
+		<!-- Le Modal forgotPwd -->
+		<div id="forgotPwd" class="modal">
 
 			<!-- Contenu Modal  -->
-				<div class="modal-content">
-					<span class="close" onclick="javascript:closeForm()" >&times;</span>
-					<form action="../script/scriptForgotPwd.php" class="form" method="POST">
+			<div class="modal-content">
+				<span class="close" onclick="javascript:closeForm()" >&times;</span>
+				<form action="script_Fr/scriptForgotPwd.php" class="form" method="POST">
 						
-						<h2>Mot de passe oubli&eacute;?</h2>
+					<h2>Mot de passe oubli&eacute;?</h2>
 						
-						<div><span> Entrer votre <strong>adresse Email</strong> ou votre <strong>nom d'utilsateur</strong>
-							de votre compte et cliquer sur envoyer</span></div><br>
-						<div><label>Email</label> <input type="email" name="recupMail" id="recupMail" required/></div>
+					<div><span> Entrer <strong>l'adresse Email</strong> de votre compte et cliquer sur envoyer</span></div><br>
+					<div><label>Email</label> <input type="email" name="recupMail" id="recupMail" required/></div>
 						
-						<button type ="submit" value ="Valider" id ="envoiMailBis" name="envoiMailBis" >Valider</button>
-						</form>
-						
-				</div>
+					<button type ="submit" value ="Valider" id ="envoiMailBis" name="envoiMailBis" >Valider</button>
+				</form>		
 			</div>
-			<script type="text/javascript">
+		</div>
+		<script type="text/javascript">
 				
-				// fonction qui ouvre le modal forgotPwd par le lien "Mot de passe oublié"
-				function openForm() {
-					var modal = document.getElementById('forgotPwd'); //recup du modal forgotPwd
-					var btn = document.getElementById("btnModalEmail"); //recupe du btn qui ouvre le modal forgotPwd
-					modal.style.display = "block"; //change display affichage du modal
-				}
+			// fonction qui ouvre le modal forgotPwd par le lien "Mot de passe oublié"
+			function openForm() {
+				var modal = document.getElementById('forgotPwd'); //recup du modal forgotPwd
+				var btn = document.getElementById("btnModalEmail"); //recupe du btn qui ouvre le modal forgotPwd
+				modal.style.display = "block"; //change display affichage du modal
+			}
 
 				// fonction qui ferme le modal forgotPwd par la croix du formulaire
-				function closeForm() {
-				
-					var modal = document.getElementById('forgotPwd'); //recup du modal forgotPwd
-					var span = document.getElementsByClassName("close")[0]; //recup btn qui ferme le modal forgotPwd
-					modal.style.display = "none"; //change display non-affichage du modal
-				}
+			function closeForm() {
+				var modal = document.getElementById('forgotPwd'); //recup du modal forgotPwd
+				var span = document.getElementsByClassName("close")[0]; //recup btn qui ferme le modal forgotPwd
+				modal.style.display = "none"; //change display non-affichage du modal
+			}
 
-			</script>
+		</script>
 			<!-- <div class="form-popup" id="myForm">
 				<form action="../script/scriptLogin.php" class="form-container" method="POST">
 				<h2>Mot de passe oubli&eacute;?</h2>

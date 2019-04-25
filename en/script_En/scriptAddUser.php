@@ -8,11 +8,11 @@ if(isset($_POST['REGISTER'])) {
     $PassWd = password_hash($_POST['Mdp'], PASSWORD_DEFAULT);
 }
 else{
-    echo '<body onLoad="alert(\'Erreur dans le Register... Recommencez\'); window.location=\'../fr/signup.html\';">';
+    echo '<body onLoad="alert(\'Error Register... try again!\'); window.location=\'../signup.html\';">';
     exit;
 }
 
-require "scriptConnexionBase.php"; // Inclusion de notre bibliothèque de fonctions
+require "../../script/scriptConnexionBase.php"; // Inclusion de notre bibliothèque de fonctions
 $db = connexionBase(); // Appel de la fonction de connexion en base
 
 $requete1 = "SELECT * FROM users WHERE Users_Mail = '$email' or Users_Login = '$Login'";
@@ -75,12 +75,16 @@ if ($result->rowCount() == 0)
     $_SESSION["flag"] = true;                           //echo($_SESSION["flag"]);echo("<br>");
 
     deconnexionBase($db, $result);
-    header("Location:../fr/login.html");         
+    echo '<body onLoad="alert(\'Welcome on Medwish, please login\'); window.location=\'../login.html\';">';        
 }
 else 
 {
-    echo '<body onLoad="alert(\'Membre existant... entrez nouveau login ou email\'); window.location=\'../fr/signup.html\';">';
-    // ouverture session 
+    echo '<body onLoad="alert(\'Existing member... enter new login or email\'); window.location=\'../signup.html\';">';
+    // destruction et reouverture session 
+    session_destroy();
     session_start();
+    $_SESSION["id_users"] = null;
     $_SESSION["flag"] = false;
+
+    deconnexionBase($db, $result);
 }

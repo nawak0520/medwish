@@ -13,15 +13,9 @@ if(isset($_POST['confirmer']))
 }
 else
 {
-    echo '<body onLoad="alert(\'Erreur dans le formulaire... Recommencez\'); window.location=\'../user/kyc-documents.html\';">';
+    echo '<body onLoad="alert(\'Erreur dans le formulaire... Recommencez\'); window.location=\'../user_Fr/kyc-documents.php\';">';
     exit;
 }
-
-// echo($_SESSION["login_users"]);echo("<br>");
-// echo($_SESSION["pwd_users"]);echo("<br>");
-// echo($_SESSION["email_users"]);echo("<br>");
-// echo($_SESSION["id_users"]);echo("<br>");
-// echo($_SESSION["flag"]);echo("<br>");
 
 //if(isset($_POST['confirmer']) || $_FILES["proofId"]) echo ("ca marche pas du tout!!!");
 //else echo("et ben on est pas sortie du sable");
@@ -33,7 +27,7 @@ else
 // format accepter du fichier placer dans un tableau    
 $aMimeTypes = array("image/jpeg", "image/pjpeg", "image/png", "image/x-png");
 
-require "scriptConnexionBase.php";          // Inclusion de notre bibliothèque de fonctions
+require "../../script/scriptConnexionBase.php";          // Inclusion de notre bibliothèque de fonctions
 $db = connexionBase();                      // appel de la fonction de connexion
 
 $requete1 = "SELECT * FROM evidence WHERE Evi_Users_Id = '$idUser' or Evi_numDoc = '$numId'";
@@ -56,13 +50,11 @@ if ($result->rowCount() == 0)
     if($_FILES['proof']['error'][0]==0) {
 
         // On extrait le type du fichier via l'extension FILE_INFO 
-        $finfo = finfo_open(FILEINFO_MIME_TYPE);                            //ouverture base finfo
-        //echo($finfo). '<br>';                          
+        $finfo = finfo_open(FILEINFO_MIME_TYPE);                            //ouverture base finfo                        
         $mimetype = finfo_file($finfo, $_FILES["proof"]["tmp_name"][0]);    //on recup le type MIME du fichier
         finfo_close($finfo);                                                //fermeture base info
         $typ2 = explode("/", $mimetype);                                    //on separe le "/" du reste de l'extension et on les places dans un tableau
         $jpg = $typ2[1];                                                    //on recup l'extension du type MIME
-        //echo($jpg.'<br>'.'on est laaaaa!');
 
     } 
     else //sinon recherche le type d'erreur de l'upload
@@ -109,12 +101,10 @@ if ($result->rowCount() == 0)
     if($_FILES['proof']['error'][1]==0) 
     {
         $finfo2 = finfo_open(FILEINFO_MIME_TYPE); 
-        //echo($finfo2);
         $mimetype2 = finfo_file($finfo2, $_FILES["proof"]["tmp_name"][1]); 
         finfo_close($finfo2); 
         $typ3 = explode("/", $mimetype2);
         $jpg2 = $typ3[1];
-        //echo ($jpg2.'<br>'.'on es iciciciccicic');
     } 
     else 
     { 
@@ -159,22 +149,22 @@ if ($result->rowCount() == 0)
     // on verifie que l'extension du fichier proofId est autorisé avant de deplacer le fichier dans le repertoire definitif
     if (in_array($mimetype, $aMimeTypes))
     {
-        move_uploaded_file($_FILES["proof"]["tmp_name"][0], "..\proof\proofIdentity\\".$idUser.".".$jpg); 
+        move_uploaded_file($_FILES["proof"]["tmp_name"][0], "..\..\proof\proofIdentity\\".$idUser.".".$jpg); 
     } 
     else 
     {
-        echo '<body onLoad="alert(\'Type de fichier non-autorisé\'); window.location=\'../user/kyc-documents.html\';">';
+        echo '<body onLoad="alert(\'Type de fichier non-autorisé\'); window.location=\'../user_Fr/kyc-documents.php\';">';
         exit;
     }
 
     // on verifie que l'extension du fichier selfiProofId est autorisé avant de deplacer le fichier dans le repertoire definitif
     if (in_array($mimetype2, $aMimeTypes))
     {
-        move_uploaded_file($_FILES["proof"]["tmp_name"][1], "..\proof\proofSelfi\\".$idUser.".".$jpg2); 
+        move_uploaded_file($_FILES["proof"]["tmp_name"][1], "..\..\proof\proofSelfi\\".$idUser.".".$jpg2); 
     } 
     else 
     {
-        echo '<body onLoad="alert(\'Type de fichier non-autorisé\'); window.location=\'../user/kyc-documents.html\';">';
+        echo '<body onLoad="alert(\'Type de fichier non-autorisé\'); window.location=\'../user_Fr/kyc-documents.php\';">';
         exit;
     }
 
@@ -197,9 +187,9 @@ if ($result->rowCount() == 0)
 
     decoBase($db);
 
-    echo '<body onLoad="alert(\'Vos informations vont-être vérifié par nos équipes \'); window.location=\'../user/dashboard.html\';">';
+    echo '<body onLoad="alert(\'Vos informations vont-être vérifié par nos équipes \'); window.location=\'../user_Fr/dashboard.php\';">';
 }
 else {
 
-    echo '<body onLoad="alert(\'ces informations existent déjà dans notre base !\'); window.location=\'../user/kyc-documents.html\';">';
+    echo '<body onLoad="alert(\'ces informations existent déjà dans notre base !\'); window.location=\'../user_Fr/kyc-documents.php\';">';
 }

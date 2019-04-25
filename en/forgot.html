@@ -9,16 +9,16 @@
 </head>
 <body  class="signin">
         <div></div>
-        <form action="/script_Fr/scriptForgotPwd.php" onsubmit="return verifMdp(this)" method ="POST">
-			<h2>Modification du mot de passe</h2>
+        <form action="script_En/scriptForgotPwd.php" onsubmit="return verifMdp(this)" method ="POST">
+			<h2>Change Password</h2>
 			
-            <div><span> Entrer votre <strong>nouveau de passe</strong> et <strong>confirmé le</strong></span></div><br><br>
+            <div><span> Enter your <strong>new Password</strong> and <strong>confirm it</strong></span></div><br><br>
             <div>
-				<label>Nouveau Mot de passe</label> 
+				<label>New password</label> 
 				<input type="password" required name="new_Pwd" id="new_Pwd" />
 			</div>
             <div>
-				<label>Confirmation</label> 
+				<label>Confirm</label> 
 				<input type="password" required name="confirm_Pwd" id="confirm_Pwd" />
 			</div>
 			<button type ="submit" value ="valider" id ="Pwd_BDD" name="Pwd_BDD">LOG IN</button>
@@ -35,21 +35,18 @@
 
 				// test si Mdp et Pwd sont superieur a 7 caract
 				if (new_Pwd.length<7 || confirm_Pwd.length<7){
-					alert('les mots de passe sont trop court, Recommencer')
+					alert('passwords are too short, Try Again!')
 					return false
 				}
 				// test si Mdp et Pwd sont different
 				else if ( new_Pwd != confirm_Pwd) {
-					alert('Les mots de passes ne correspondent pas, Recommencer.')
+					alert('Passwords don\'t match, Try Again!')
 					return false;
 				}
 				else {
 					return true;
 				}
-
 			}
-		
-		
 		</script>
 </body>
 </html>

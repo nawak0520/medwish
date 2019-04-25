@@ -4,7 +4,7 @@ function connexionBase()
     // Paramètre de connexion au serveur de la BDD
     $host = "localhost";
     $login= "root";      
-    $password="123456";    
+    $password="1234";    
     $base = "medwish";  
     
     
