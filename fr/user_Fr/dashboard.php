@@ -35,7 +35,7 @@ if (isset($_SESSION['id_users']))
 			<p>Bon retour <?php echo ("Mr.".$_SESSION['login_users']);?> et merci de croire en Medwish</p>
 			<div class="timeleft"><span class="name">VENTE PRINCIPALE CYCLE 1</span> <span>00 : 00 : 00 : 00</span></div>
 			<div class="actions">
-				<a><img src="../../images/user/notification.svg"/></a><a href=../script_Fr/scriptLogout.php title="Deconnexion"><img src="../../images/user/logout.svg"/></a>
+				<a><img src="../../images/user/notification.svg"/></a><a href="../script_Fr/scriptLogout.php" title="Deconnexion"><img src="../../images/user/logout.svg"/></a>
 			</div>
 		</header>
 		<div class="content">

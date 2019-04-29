@@ -5,17 +5,17 @@
 $Users_Mail = $_POST['email_users'];
 $Users_Password = $_POST['pwd_users'];
 
-$adminLogin ="adminUser01!@gestion.kyc-document";
+$adminLogin ="adminUser01!@gestion.kyc-document";       // admin dans le script et non dans la base
 $password_Admin = "Medwish01!";
 
 require "../../script/scriptConnexionBase.php"; // Inclusion de notre bibliothèque de fonctions
 $db = connexionBase(); // Appel de la fonction de connexion en base
 
-if ($Users_Mail == $adminLogin && $Users_Password == $password_Admin)
+if ($Users_Mail == $adminLogin && $Users_Password == $password_Admin)       // verifie que est le type de connexion
 {
     session_start();
-    $_SESSION["login_users"] = "Admin_Medwish";
-    $_SESSION["pwd_users"] = $Users_Password;
+    $_SESSION["login_users"] = "Admin_Medwish";     //si admin redirection sur une page particulière avec ouverture
+    $_SESSION["pwd_users"] = $Users_Password;       // de session particulière
     $_SESSION["email_users"] = $Users_Mail;
     $_SESSION["id_users"] = "bigbro10";
     $_SESSION["flag"] = true;
@@ -53,7 +53,7 @@ else
             // affiche le message d'alerte + redirection sur la page login.html
             echo '<body onLoad="alert(\'Membre non reconnu...Réessayer\'); window.location=\'../login.html\';">';           
         }
-        else if ($result->rowCount() > 0) 
+        else if ($result->rowCount() > 0) //sinon  test si le resultat est superieur a 0
         {   
             $row = $result->fetch((PDO::FETCH_OBJ));
             //var_dump($row);
@@ -72,13 +72,12 @@ else
                 //fermeture connexion base
                 deconnexionBase($db, $result);
                 
-                header("Location:../user_Fr/dashboard.php");
+                header("Location:../user_Fr/dashboard.php");  //redirection sur le dashboard
                 exit; 
             }
-            
-
+        
             else {
-            session_destroy();
+            session_destroy();  //mise en place d'une session fictive interdisant l'accès au reste du site
             session_start();
             $_SESSION["id_users"] = null;
             $_SESSION["flag"] = false;

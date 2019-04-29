@@ -56,6 +56,8 @@ $message.= $passage_ligne."--".$boundary."--".$passage_ligne;
 mail($mailEnvoi,$sujet,$message,$header);
 }
 
+
+
 // function SelectSql ($requete){
 
 //     $result = $db->query($requete);

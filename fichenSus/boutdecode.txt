@@ -1,0 +1,12 @@
+﻿while ($row2 = $result2->fetch(PDO::FETCH_OBJ)){
+									if ($nation == $row2->Nationality_Id){
+									?>
+									
+									<option value="<?=$row2->Nationality_Id?>" selected="selected"><?=$row2->Nationality_Fr?></option>
+									
+								<?php }
+									else {
+								?>
+								<option value="<?=$row2->Nationality_Id?>" selected="selected"><?=$row2->Nationality_Fr?></option>
+								<?php }
+								}?>

@@ -28,7 +28,7 @@ $db = connexionBase(); // Appel de la fonction de connexion en base
 
 
 
-$requete = "update Users set 
+$requete = "update users set 
 Users_Name = ?,
 Users_Surname = ?,
 Users_Gender = ?,

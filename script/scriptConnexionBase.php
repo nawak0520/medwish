@@ -27,18 +27,18 @@ function connexionBase()
     } 
 }
 
-function deconnexionBase($db, $result)
+function deconnexionBase($db, $result) //deconnexion de la base par le null de l'objet
 {
     $db = null;
     $result = null;
 }
 
-function decoResult($result)
+function decoResult($result)    // mise a null des resultat objet
 {
     $result = null;
 }
 
-function decoBase($db)
+function decoBase($db)      //deco de la base
 {
     $db = null;
 }

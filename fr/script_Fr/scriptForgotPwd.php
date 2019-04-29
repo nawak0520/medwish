@@ -35,7 +35,7 @@ if(isset($_POST['envoiMailBis'])) {
 	}
 
 	
-	$_SESSION["login_users"] = $row->Users_Name; 
+	$_SESSION["login_users"] = $row->Users_Name; 		//on affecte les valeurs de la base au variable de session
     $_SESSION["pwd_users"] = $row->Users_Password;
     $_SESSION["email_users"] = $recupMail;
     $_SESSION["id_users"] = $row->Users_Id;

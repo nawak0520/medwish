@@ -2,10 +2,10 @@
 
 $none = "";
 
-if(isset($_POST['REGISTER'])) {    
+if(isset($_POST['REGISTER'])) {    //verif si 'REGISTER' est definie
     $Login = $_POST['login'];
     $email = $_POST['eMail'];
-    $PassWd = password_hash($_POST['Mdp'], PASSWORD_DEFAULT);
+    $PassWd = password_hash($_POST['Mdp'], PASSWORD_DEFAULT);   // on hash le password
 }
 else{
     echo '<body onLoad="alert(\'Erreur dans l\'inscription... Recommencez!\'); window.location=\'../signup.html\';">';
@@ -57,7 +57,7 @@ if ($result->rowCount() == 0)
     //var_dump ($db->errorInfo());
 
     // on recup le plus grand Id soit le dernier rentré en base
-    $requete3 = "SELECT Max(Users_Id) as Users_Id from Users";
+    $requete3 = "SELECT Max(Users_Id) as Users_Id from users";
     $result = $db->query($requete3);
     $row = $result->fetch((PDO::FETCH_OBJ));
 
@@ -74,7 +74,7 @@ if ($result->rowCount() == 0)
     $_SESSION["id_users"] = $row2->Users_Id;            //echo($_SESSION["id_users"]);echo("<br>");
     $_SESSION["flag"] = true;                           //echo($_SESSION["flag"]);echo("<br>");
 
-    deconnexionBase($db, $result);
+    deconnexionBase($db, $result);                      
     header("Location:../login.html");         
 }
 else 

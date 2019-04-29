@@ -21,25 +21,21 @@ if(isset($_POST['envoiMailBis'])) {
 	{
 		$tableauErreurs = $db->errorInfo();
 		echo $tableauErreur[2]; 
-		die("Error DB");
+		die("Erreur dans la requête");
 	} 
 
 	//test si $result possède des lignes
 	if ($result->rowCount() == 0) 
 	{
-		//destruction et reouverture session 
-		session_destroy();
-        session_start();
-        $_SESSION["id_users"] = null;
-        $_SESSION["flag"] = false;
-
-        deconnexionBase($db, $result);
+		//ouverture session 
+		session_start();
+		$_SESSION["flag"] = false;
 		
-		echo '<body onLoad="alert(\'No email address available!\'); window.location=\'../login.html\';">';
+		echo '<body onLoad="alert(\'Adresse Mail inexistante!\'); window.location=\'../login.html\';">';
 	}
 
 	
-	$_SESSION["login_users"] = $row->Users_Name; 		//on affecte les valeur de la base à la session
+	$_SESSION["login_users"] = $row->Users_Name; 		//on affecte les valeurs de la base au variable de session
     $_SESSION["pwd_users"] = $row->Users_Password;
     $_SESSION["email_users"] = $recupMail;
     $_SESSION["id_users"] = $row->Users_Id;
@@ -53,14 +49,14 @@ if(isset($_POST['envoiMailBis'])) {
 
 
 	$mail = $_SESSION["email_users"]; // Déclaration de l'adresse de destination.
-	$sujetEnvoi = "Hey my friend !"; //sujet du mail a envoyer
-	$messageEnvoi = "Please click on the following link to change your password
-	<a href=\"http://localhost/web/medwish/en/forgot.html?Users_id=".$_SESSION["pwd_users"]."\">My new password</a>";
+	$sujetEnvoi = "Hey mon ami !"; //sujet du mail a envoyer
+	$messageEnvoi = "Veuillez-cliquez sur le lien ci-dessous pour modifier votre mot de passe
+	<a href=\"http://localhost/web/medwish/fr/forgot.html?Users_id=".$_SESSION["pwd_users"]."\">Mon nouveau mot de passe</a>";
 
 //recuperation du type de mail par rapport au serveur (problème des passage de ligne source OpenClassrooms)
 
 	superMail($messageEnvoi, $sujetEnvoi, $mail);
-	echo '<body onLoad="alert(\'An email was sent, please check your mail box!\'); window.location=\'../login.html\';">';
+	echo '<body onLoad="alert(\'un mail vous à été envoyé!\'); window.location=\'../login.html\';">';
 }
 
 
@@ -84,7 +80,7 @@ if (isset($_POST['Pwd_BDD'])){
 	// echo($_SESSION["flag"]);
 	//var_dump ($db->errorInfo());
 	
-	echo '<body onLoad="alert(\'Changed password, please login!\'); window.location=\'../login.html\';">';
+	echo '<body onLoad="alert(\'Mot de passe modifié, Connectez-vous!\'); window.location=\'../login.html\';">';
 }
 
 deconnexionBase($db, $result)

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if(isset($_POST['confirmer'])) 
+if(isset($_POST['confirmer']))  // on verifie que 'confirmer' est definie 
 {    
     $typeDoc = $_POST['typeDoc'];   
     $numId = $_POST['numId'];       
@@ -16,18 +16,11 @@ else
 }
 
 
-//if(isset($_POST['confirmer']) || $_FILES["proofId"]) echo ("ca marche pas du tout!!!");
-//else echo("et ben on est pas sortie du sable");
-
-//var_dump($_FILES["proofId"]);
-//var_dump($_FILES["selfiProofId"]);
-
-
 // format accepter du fichier placer dans un tableau    
 $aMimeTypes = array("image/jpeg", "image/pjpeg", "image/png", "image/x-png");
 
 require "../../script/scriptConnexionBase.php";          // Inclusion de notre bibliothèque de fonctions
-$db = connexionBase();                      // appel de la fonction de connexion
+$db = connexionBase();                                   // appel de la fonction de connexion
 
 $requete1 = "SELECT * FROM evidence WHERE Evi_Users_Id = '$idUser' or Evi_numDoc = '$numId'";
 
@@ -168,10 +161,10 @@ if ($result->rowCount() == 0)
     }
 
     $conf = "0";
-
+    //requète d'insertion en base avec mise a faux de conf pour verification dans l' admin 
     $requete = "insert into evidence (Evi_Type, Evi_Document, Evi_numDoc, Evi_Selfie, Evi_Conf, Evi_Users_Id) values (?, ?, ?, ?, ?, ?)";
     
-    $stmt = $db->prepare($requete);
+    $stmt = $db->prepare($requete); //prepa req camouflage des paramêtres
 
     $stmt->bindParam(1, $typeDoc);
     $stmt->bindParam(2, $jpg);

@@ -28,7 +28,7 @@ $db = connexionBase(); // Appel de la fonction de connexion en base
 
 
 
-$requete = "update Users set 
+$requete = "update users set        
 Users_Name = ?,
 Users_Surname = ?,
 Users_Gender = ?,
@@ -42,9 +42,9 @@ Users_Phone =?,
 Users_Mail =?,
 Users_Job =?,
 Users_Country_id =?,
-Users_Nationality_Id =?    where Users_Id = ?";
+Users_Nationality_Id =?    where Users_Id = ?"; //prepa de la requète de modification en base
     
-    $stmt = $db->prepare($requete);
+    $stmt = $db->prepare($requete);             //camouflage des paramêtres 
 
     $stmt->bindParam(1, $_POST['firstname']);
     $stmt->bindParam(2, $_POST['lastname']);
@@ -62,10 +62,10 @@ Users_Nationality_Id =?    where Users_Id = ?";
     $stmt->bindParam(14, $_POST['nationality']);
     $stmt->bindParam(15, $_SESSION["id_users"]);
 
-    $stmt->execute();
-    var_dump ($db->errorInfo());
+    $stmt->execute();   //execution req
+    //var_dump ($db->errorInfo());
     deconnexionBase($db, $result);
             
-    header("Location:../user_Fr/dashboard.php");
+    header("Location:../user_Fr/dashboard.php"); //redirection
     
 

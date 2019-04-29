@@ -17,8 +17,8 @@ else
     exit;
 }
 
-//var_dump($_FILES["proofId"]);
-//var_dump($_FILES["selfiProofId"]);
+var_dump($_FILES["proof"]);
+var_dump($_FILES["proof"]);
 
 
 // format accepter du fichier placer dans un tableau    
@@ -145,8 +145,10 @@ if ($result->rowCount() == 0)
 
     // on verifie que l'extension du fichier proofId est autorisé avant de deplacer le fichier dans le repertoire definitif
     if (in_array($mimetype, $aMimeTypes))
-    {
-        move_uploaded_file($_FILES["proof"]["tmp_name"][0], "..\..\proof\proofIdentity\\".$idUser.".".$jpg); 
+    {   
+        $path = $_SERVER ["DOCUMENT_ROOT"]."web/medwish/proof/proofIdentity/".$idUser.".".$jpg;
+        $ret = move_uploaded_file($_FILES["proof"]["tmp_name"][0], $path); echo('<br>');
+        echo $ret;
     } 
     else 
     {
@@ -157,6 +159,7 @@ if ($result->rowCount() == 0)
     // on verifie que l'extension du fichier selfiProofId est autorisé avant de deplacer le fichier dans le repertoire definitif
     if (in_array($mimetype2, $aMimeTypes))
     {
+        echo($_FILES["proof"]["tmp_name"][1]);echo("<br><br>");
         move_uploaded_file($_FILES["proof"]["tmp_name"][1], "..\..\proof\proofSelfi\\".$idUser.".".$jpg2); 
     } 
     else 
@@ -184,7 +187,7 @@ if ($result->rowCount() == 0)
 
     decoBase($db);
 
-    echo '<body onLoad="alert(\'Vos informations vont-être vérifié par nos équipes \'); window.location=\'../user_Fr/dashboard.php\';">';
+    //echo '<body onLoad="alert(\'Vos informations vont-être vérifié par nos équipes \'); window.location=\'../user_Fr/dashboard.php\';">';
 }
 else {
 
